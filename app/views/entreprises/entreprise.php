@@ -27,9 +27,9 @@
         <div class="info public">
             <h3>info public</h3>
             <p><img src="https://cdn-icons-png.flaticon.com/512/16207/16207218.png" width=20 height=20/>secteur d'activité </p>
-            <img src="https://cdn-icons-png.flaticon.com/512/8386/8386432.png" width=20 height=20/><h4>texte de description de l'entreprise</h4>
-            <img src="https://cdn-icons-png.flaticon.com/512/8056/8056414.png" width=20 height=20/><h4>le mail</h4>
-            <img src="https://cdn-icons-png.flaticon.com/512/5219/5219383.png" width=20 height=20/><h4>paris</h4>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/8386/8386432.png" width=20 height=20/>texte de description de l'entreprise</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/8056/8056414.png" width=20 height=20/>le mai</p>
+            <p><img src="https://cdn-icons-png.flaticon.com/512/5219/5219383.png" width=20 height=20/>paris</p>
         </div>
         <div class="info privé">
             <h3>info privé</h3>
