@@ -270,3 +270,179 @@ body.menu-open {
 /*FZNZTERZ PROFIL-----------------------------------------------*/
 
 /*index -----------------------------------------------------------------------*/
+
+
+
+
+/*connexion/inscription -----------------------------------------------------------------------*/
+
+/* Style global */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #d2e9f9;
+    color: #333;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #002c4f;
+    color: #fff;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    font-family: 'Cursive';
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.notification {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+/* Conteneurs de page */
+.login-container, .register-container {
+    text-align: center;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #7ba9c9;
+}
+
+/* Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 320px;
+    margin: auto;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    padding: 12px 40px 12px 10px;
+    border: 1px solid #7ba9c9;
+    border-radius: 25px;
+    outline: none;
+    width: 100%;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+}
+
+.input-group i {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7ba9c9;
+}
+
+/* Boutons */
+.btn, .btn-outline, .btn-google {
+    padding: 12px;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 16px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.btn {
+    background-color: #7ba9c9;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #6593b2;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #7ba9c9;
+    border: 1px solid #7ba9c9;
+}
+
+.btn-outline:hover {
+    background-color: #e0f2fe;
+}
+
+.btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    color: #555;
+    border: 1px solid #ddd;
+}
+
+.google-icon {
+    height: 20px;
+    margin-right: 8px;
+}
+
+/* Texte supplémentaire */
+.forgot-password, .create-account p {
+    margin-top: 10px;
+    color: #002c4f;
+    text-decoration: underline;
+}
+
+.remember-me, .privacy-policy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    color: #555;
+}
+
+.divider span {
+    margin: 0 10px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background-color: #aaa;
+}
+/*connexion/inscription -----------------------------------------------------------------------*/
