@@ -172,6 +172,6 @@ hr {
  background: #4278e6;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -15px -15px 30px rgb(60, 60, 60);
-             margin: 10%
+             padding: 5%
 
 }
