@@ -166,10 +166,10 @@ hr {
 }
 
 .info_public {
-    width: 190px;
+    width: 100%;
  height: 254px;
  border-radius: 30px;
- background: #706868;
+ background: #164197;
  box-shadow: 15px 15px 30px rgb(25, 25, 25),
              -15px -15px 30px rgb(60, 60, 60);
              margin: 10%
