@@ -1,11 +1,11 @@
-<?php ?>
+<?php include 'includes/header.php'; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyStage - Connexion</title>
-    <link rel="stylesheet" href="C:\xampp\htdocs\projet-developpement-web-\publique\assets\css\style.css">
+    <link rel="stylesheet" href="public\assets\css\style.css">
 </head>
 <body>
     <header class="header">
@@ -20,9 +20,9 @@
         </div>
     </header>
 
-    <main class="login-container">
+    <main class="connexion-container">
         <h2>SE CONNECTER</h2>
-        <form class="login-form" action="#" method="post">
+        <form class="connexion-form" action="#" method="post">
             <div class="input-group">
                 <label for="username">Numéro de téléphone, nom d'utilisateur, email</label>
                 <input type="text" id="username" name="username" placeholder="Numéro de téléphone, nom d'utilisateur, email" required>
