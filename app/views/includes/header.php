@@ -18,8 +18,8 @@
         </div>
 
         <div class="header-icons">
-            <a href="#"><img src="../assets/notif-icon.png" alt="Notifications"></a>
-            <a href="#"><img src="../assets/profile-icon.png" alt="Profil"></a>
+            <a href="#"><img src="/public/assets/images/notif-icon.png" alt="Notifications"></a>
+            <a href="#"><img src="/public/assets/images/notif-icon.png" alt="Profil"></a>
         </div>
 
             <!-- Icône du menu burger avec une image -->
