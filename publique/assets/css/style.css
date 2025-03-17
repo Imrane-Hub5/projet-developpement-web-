@@ -178,7 +178,7 @@ hr {
 .info_public {
     width: 190px;
     height: 254px;
-    background: #07182E;
+    background: #1e5cad;
     position: relative;
     display: flex;
     place-content: center;
@@ -187,9 +187,9 @@ hr {
     border-radius: 20px;
   }
   
-  .cinfo_public h2 {
+  .info_public h2 {
     z-index: 1;
-    color: white;
+    color: rgb(136, 64, 64);
     font-size: 2em;
   }
   
@@ -216,7 +216,7 @@ hr {
   .info_public::after {
     content: '';
     position: absolute;
-    background: #07182E;
+    background: #1e65c1;
     ;
     inset: 5px;
     border-radius: 15px;
