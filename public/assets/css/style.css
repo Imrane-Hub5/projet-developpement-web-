@@ -1,0 +1,272 @@
+/*index -----------------------------------------------------------------------*/
+html, body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #E3F2FD;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* Permet au contenu de s'étendre */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background: #00274D;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 15px;
+}
+
+nav {
+    display: flex;
+    gap: 25px; /* Espacement entre les liens */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 15px 10px;
+    display: block;
+    width: 100%;
+    text-align: center; /* Centre les liens */
+}
+
+nav a:hover {
+    color: #00BFFF;
+}
+
+nav.show {
+    right: 0; /* Fait glisser le menu depuis la droite */
+}
+
+/* Ajout d’un overlay foncé quand le menu est ouvert */
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    transition: opacity 0.3s ease-in-out
+}
+
+
+.search {
+    text-align: center;
+    padding: 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+
+
+.offers, .match-cv, .domains, .recent-offers {
+    padding: 20px;
+}
+
+.offer-card, .domain-card, .offer-item {
+    background: white;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.offer-card:hover, .domain-card:hover, .offer-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    background: black;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: auto; /* Pousse le footer en bas de la page */
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    vertical-align: middle; /* Alignement du logo */
+}
+
+.header-icons {
+    display: flex;
+    gap: 15px; /* Espacement entre les icônes */
+    align-items: center;
+    margin-left: auto;
+
+}
+
+.header-icons img {
+    height: 40px;
+    width: auto;
+}
+
+.header-icons i {
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-icons i:hover {
+    transform: scale(1.2);
+}
+
+.burger-menu {
+    z-index: 1002; /* S'assurer que l'icône reste au-dessus */
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 15px; /* Espacement entre icônes et burger */
+}
+
+
+/* Icône du menu burger */
+.burger-menu img {
+    height: 45px; /* Ajuste la taille selon ton image */
+    width: auto;
+    cursor: pointer;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* RESPONSIVE : Affichage mobile */
+@media screen and (max-width: 768px) {
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 10px 15px;
+
+    }
+
+    .burger-menu {
+        cursor: pointer;
+        margin-left: auto; /* Pousse le menu à droite */
+        display: flex;
+        align-items: center;
+    }
+    
+
+    nav {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Caché par défaut */
+        width: 250px;
+        height: 100vh;
+        background: #00274D;
+        flex-direction: column;
+        align-items: center; /* Centre les liens */
+        padding-top: 60px; /* Ajoute un espace en haut */
+        transition: right 0.3s ease-in-out;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+    }
+
+    nav.show {
+        display: 0; /* Afficher quand activé */
+    }
+}
+
+/*FZNZTERZ PROFIL-----------------------------------------------*/
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 39, 77, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenu de la modale */
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Bouton de fermeture */
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Boutons */
+.btn-red {
+    background: red;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+/*FZNZTERZ PROFIL-----------------------------------------------*/
+
+/*index -----------------------------------------------------------------------*/
