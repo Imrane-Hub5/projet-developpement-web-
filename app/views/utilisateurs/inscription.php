@@ -20,7 +20,7 @@
         </div>
     </header>
 
-    <main class="register-container">
+    <main class="inscription-container">
         <h2>S'INSCRIRE</h2>
         <p>Inscrivez-vous pour pouvoir accéder aux offres de stage</p>
 
@@ -33,7 +33,7 @@
             <span>OU</span>
         </div>
 
-        <form class="register-form" action="#" method="post">
+        <form class="inscription-form" action="#" method="post">
             <div class="input-group">
                 <label for="email">Numéro de téléphone ou email</label>
                 <input type="text" id="email" name="email" placeholder="Numéro de téléphone ou email" required>
