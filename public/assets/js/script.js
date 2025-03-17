@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 //PROFIL--------------------------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//----------------------------------------------------------------------------------------------------------NOTIFICATIONS-
+//-NOTIFICATIONS----------------------------------------------------------------------------------------
 
 
 document.addEventListener("DOMContentLoaded", function () {
