@@ -213,7 +213,7 @@ body.menu-open {
     }
 }
 
-/*FZNZTERZ PROFIL-----------------------------------------------*/
+/* FZNZTERZ PROFIL-----------------------------------------------
 .modal {
     display: none; 
     position: fixed;
@@ -228,7 +228,7 @@ body.menu-open {
     align-items: center;
 }
 
-/* Contenu de la modale */
+ Contenu de la modale 
 .modal-content {
     background: white;
     padding: 25px;
@@ -239,7 +239,7 @@ body.menu-open {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Bouton de fermeture */
+ Bouton de fermeture 
 .close {
     position: absolute;
     right: 15px;
@@ -249,10 +249,10 @@ body.menu-open {
     color: white;
 }
 
-/* Boutons */
+/* Boutons 
 .btn-red {
-    background: red;
-    color: white;
+    background: rgb(11, 11, 11);
+    color: rgb(102, 96, 219);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -267,7 +267,7 @@ body.menu-open {
     border-radius: 5px;
     cursor: pointer;
 }
-/*FZNZTERZ PROFIL-----------------------------------------------*/
+/*FZNZTERZ PROFIL----------------------------------------------- */
 
 /*index -----------------------------------------------------------------------*/
 
@@ -314,8 +314,8 @@ body {
     position: absolute;
     top: -5px;
     right: -5px;
-    background-color: red;
-    color: white;
+    background-color: rgb(210, 210, 210);
+    color: rgb(45, 43, 181);
     border-radius: 50%;
     padding: 2px 5px;
     font-size: 12px;
@@ -446,121 +446,3 @@ form {
     background-color: #aaa;
 }
 /*connexion/inscription -----------------------------------------------------------------------*/
-/*entreprise ----------------------------------------------------------------------------------*/
-/* Reset de base */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* Style général */
-body {
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
-
-/* Header */
-header {
-    background-color: #0073e6;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-}
-
-header h1 {
-    margin-bottom: 10px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    text-decoration: underline;
-}
-
-/* Section entreprise */
-#entreprise {
-    background: white;
-    width: 80%;
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#entreprise h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #0073e6;
-}
-
-/* Info publique et privée */
-.info_public, .info_prive {
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.info_public {
-    background-color: #e3f2fd;
-}
-
-.info_prive {
-    background-color: #fce4ec;
-}
-
-/* Icônes et texte */
-.info_public p, .info_prive h3 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    font-size: 1.1em;
-}
-
-.info_public img {
-    margin-right: 10px;
-}
-
-/* Boutons */
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
-    border-radius: 5px;
-    background-color: #0073e6;
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-button:hover {
-    background-color: #005bb5;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    margin-top: 20px;
-}
