@@ -37,6 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+
 //PROFIL--------------------------------------------------------------------------------------------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-//----------------------------------------------------------------------------------------------------------NOTIFICATIONS-
+//-NOTIFICATIONS----------------------------------------------------------------------------------------
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -109,3 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //--------------------------------------------------------------------------------------------------NOTIFICATIONS-
 
+document.addEventListener("DOMContentLoaded", function () {
+    var modal = document.getElementById("profileModal");
+    if (modal) {
+        modal.remove(); // Supprime complètement la modale si elle existe
+    }
+});
