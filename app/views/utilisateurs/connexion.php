@@ -20,9 +20,9 @@
         </div>
     </header>
 
-    <main class="login-container">
+    <main class="connexion-container">
         <h2>SE CONNECTER</h2>
-        <form class="login-form" action="#" method="post">
+        <form class="connexion-form" action="#" method="post">
             <div class="input-group">
                 <label for="username">Numéro de téléphone, nom d'utilisateur, email</label>
                 <input type="text" id="username" name="username" placeholder="Numéro de téléphone, nom d'utilisateur, email" required>
