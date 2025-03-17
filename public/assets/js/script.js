@@ -69,3 +69,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 //-------------------------------------------------------------------------------------------------------------PROFIL-
+
+
+
+
+
+
+
+
+//----------------------------------------------------------------------------------------------------------NOTIFICATIONS-
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var notificationIcon = document.querySelector(".notification");  
+    var notificationBadge = document.querySelector(".badge");  
+    var notifications = ["Nouvelle notification", "Stage disponible", "Rappel de candidature"];  
+
+    // Fonction pour mettre à jour l'affichage du badge
+    function updateNotificationBadge() {
+        if (notifications.length > 0) {
+            notificationBadge.style.display = "inline-block"; 
+            notificationBadge.textContent = notifications.length;  
+        } else {
+            notificationBadge.style.display = "none";  
+        }
+    }
+
+    // Ajouter une notification au clic sur l'icône des notifications
+    notificationIcon.addEventListener("click", function () {
+        if (notifications.length > 0) {
+            alert("Notifications: " + notifications.join(", "));  
+            notifications = []; 
+        }
+        updateNotificationBadge(); 
+    });
+
+    updateNotificationBadge(); 
+});
+
+//--------------------------------------------------------------------------------------------------NOTIFICATIONS-
+
