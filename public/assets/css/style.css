@@ -322,7 +322,7 @@ body {
 }
 
 /* Conteneurs de page */
-.login-container, .register-container {
+.connexion-container, .inscription-container {
     text-align: center;
     padding: 20px;
 }
