@@ -446,7 +446,3 @@ form {
     background-color: #aaa;
 }
 /*connexion/inscription -----------------------------------------------------------------------*/
-#profileModal {
-    display: none !important;
-    visibility: hidden;
-}
