@@ -31,7 +31,7 @@
             <p><img src="https://cdn-icons-png.flaticon.com/512/8056/8056414.png" width=20 height=20/>le mai</p>
             <p><img src="https://cdn-icons-png.flaticon.com/512/5219/5219383.png" width=20 height=20/>paris</p>
         </div>
-        <div class="info privé">
+        <div class="info_privé">
             <h3>info privé</h3>
             <button onclick="lesstagespublier()">les stages publier</button>
             <button onclick="candidature()">candidature</button>
