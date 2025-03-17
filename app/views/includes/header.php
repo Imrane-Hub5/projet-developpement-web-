@@ -13,18 +13,18 @@
     <div class="header-container">
         <div class="logo">
             <a href="/webtest/views/index.php">
-                <img src="../assets/logo.png" alt="EasyStage Logo">
+                <img src="/public/assets/images/logo.png" alt="EasyStage Logo">
             </a>
         </div>
 
         <div class="header-icons">
             <a href="#"><img src="/public/assets/images/notif-icon.png" alt="Notifications"></a>
-            <a href="#"><img src="/public/assets/images/notif-icon.png" alt="Profil"></a>
+            <a href="#"><img src="/public/assets/images/profile-icon.png" alt="Profil"></a>
         </div>
 
             <!-- Icône du menu burger avec une image -->
         <div class="burger-menu" onclick="toggleMenu()">
-        <img src="../assets/menu-burger.png" alt="Menu" id="burger-icon">
+        <img src="/public/assets/images/menu-burger.png" alt="Menu" id="burger-icon">
         </div>
 
     </div>
@@ -39,7 +39,7 @@
 
 </header>
 
-<!-- Fenêtre modale -->
+<!-- Fenêtre modale
 <div id="profileModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
@@ -50,3 +50,4 @@
         <button class="btn-black">Me connecter</button>
     </div>
 </div>
+x   
