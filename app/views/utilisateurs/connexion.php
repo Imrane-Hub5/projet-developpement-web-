@@ -1,28 +1,50 @@
-<?php
-require 'config.php';
+<?php ?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyStage - Connexion</title>
+    <link rel="stylesheet" href="C:\xampp\htdocs\projet-developpement-web-\publique\assets\css\style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">EasyStage</div>
+        <div class="icons">
+            <div class="notification">
+                <span class="icon">🔔</span>
+                <span class="badge">1</span>
+            </div>
+            <div class="profile">👤</div>
+            <div class="menu">☰</div>
+        </div>
+    </header>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    <main class="login-container">
+        <h2>SE CONNECTER</h2>
+        <form class="login-form" action="#" method="post">
+            <div class="input-group">
+                <label for="username">Numéro de téléphone, nom d'utilisateur, email</label>
+                <input type="text" id="username" name="username" placeholder="Numéro de téléphone, nom d'utilisateur, email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Mot de passe</label>
+                <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+            </div>
+            <div class="remember-me">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">Se souvenir de moi</label>
+            </div>
+            <button type="submit" class="btn">Connexion</button>
+            <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+        </form>
 
-    $stmt = $conn->prepare("SELECT id, password FROM users WHERE email = ?");
-    $stmt->bind_param("s", $email);
-    $stmt->execute();
-    $stmt->store_result();
-    $stmt->bind_result($id, $hashed_password);
+        <hr>
 
-    if ($stmt->num_rows > 0) {
-        $stmt->fetch();
-        if (password_verify($password, $hashed_password)) {
-            echo "Connexion réussie !";
-        } else {
-            echo "Mot de passe incorrect.";
-        }
-    } else {
-        echo "Aucun utilisateur trouvé.";
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-?>
+        <div class="create-account">
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="inscription.html" class="btn-outline">Créer un compte</a>
+        </div>
+    </main>
+</body>
+</html>
