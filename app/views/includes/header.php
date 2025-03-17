@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyStage - Offres de Stages</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="/public/assets/css/style.css">
 </head>
 
 <body>
@@ -31,15 +31,15 @@
 
 
     <nav id="navbar">
-            <a href="/webtest/views/index.php">Accueil</a>
-            <a href="/webtest/views/offres.php">Offres</a>
-            <a href="/webtest/views/utilisateurs/connexion.php">Connexion</a>
-            <a href="/webtest/views/utilisateurs/inscription.php">Inscription</a>
+            <a href="/monprojet/views/index.php">Accueil</a>
+            <a href="/monprojet/views/offres.php">Offres</a>
+            <a href="/monprojet/views/utilisateurs/connexion.php">Connexion</a>
+            <a href="/monprojet/views/utilisateurs/inscription.php">Inscription</a>
     </nav>
 
 </header>
 
-<!-- Fenêtre modale -->
+<!-- Fenêtre modale
 <div id="profileModal" class="modal">
     <div class="modal-content">
         <span class="close">&times;</span>
@@ -49,5 +49,5 @@
         <p>De retour ?</p>
         <button class="btn-black">Me connecter</button>
     </div>
-</div>
+</div> -->
 
