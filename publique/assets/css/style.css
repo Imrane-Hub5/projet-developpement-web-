@@ -185,6 +185,7 @@ hr {
     place-items: center;
     overflow: hidden;
     border-radius: 20px;
+    align-items: center;
   }
   
   .info_public h2 {
