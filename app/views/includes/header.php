@@ -13,28 +13,28 @@
     <div class="header-container">
         <div class="logo">
             <a href="/webtest/views/index.php">
-                <img src="../assets/logo.png" alt="EasyStage Logo">
+                <img src="/public/assets/images/logo.png" alt="EasyStage Logo">
             </a>
         </div>
 
         <div class="header-icons">
-            <a href="#"><img src="../assets/notif-icon.png" alt="Notifications"></a>
-            <a href="#"><img src="../assets/profile-icon.png" alt="Profil"></a>
+            <a href="#"><img src="/public/assets/images/notif-icon.png" alt="Notifications"></a>
+            <a href="#"><img src="/public/assets/images/profile-icon.png" alt="Profil"></a>
         </div>
 
             <!-- Icône du menu burger avec une image -->
         <div class="burger-menu" onclick="toggleMenu()">
-        <img src="../assets/menu-burger.png" alt="Menu" id="burger-icon">
+        <img src="/public/assets/images/menu-burger.png" alt="Menu" id="burger-icon">
         </div>
 
     </div>
 
 
     <nav id="navbar">
-            <a href="/monprojet/views/index.php">Accueil</a>
-            <a href="/monprojet/views/offres.php">Offres</a>
-            <a href="/monprojet/views/utilisateurs/connexion.php">Connexion</a>
-            <a href="/monprojet/views/utilisateurs/inscription.php">Inscription</a>
+            <a href="/webtest/views/index.php">Accueil</a>
+            <a href="/webtest/views/offres.php">Offres</a>
+            <a href="/webtest/views/utilisateurs/connexion.php">Connexion</a>
+            <a href="/webtest/views/utilisateurs/inscription.php">Inscription</a>
     </nav>
 
 </header>
@@ -49,5 +49,5 @@
         <p>De retour ?</p>
         <button class="btn-black">Me connecter</button>
     </div>
-</div> -->
-
+</div>
+x   
