@@ -1,8 +1,5 @@
-<<<<<<< HEAD
+
 <?php include '../includes/header.php'; ?>
-=======
-<?php include('../includes/header.php'); ?>
->>>>>>> c8f2fed8aa1abf411bb5bb24a544fe8746dbda27
 
 <body>
     <header>
