@@ -1,24 +1,5 @@
 <?php include('../includes/header.php'); ?>
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyStage - Inscription</title>
-    
-</head>
-<body>
-    <header class="header">
-        <div class="logo">EasyStage</div>
-        <div class="icons">
-            <div class="notification">
-                <span class="icon">🔔</span>
-                <span class="badge">1</span>
-            </div>
-            <div class="profile">👤</div>
-            <div class="menu">☰</div>
-        </div>
-    </header>
+
 
     <main class="inscription-container">
         <h2>S'INSCRIRE</h2>
