@@ -1,9 +1,9 @@
 <?php include('../includes/header.php'); ?>
 
 <body>
-    <header>
-        <h1>Offres de Stage</h1>
-        <nav>
+    <!-- <header>  -->
+        
+        <!-- <nav>
             <ul>
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="offres.html">Offres de Stage</a></li>
@@ -11,9 +11,9 @@
                 <li><a href="connexion.html">Connexion</a></li>
                 <li><a href="profil-etudiant.html">Profil</a></li>
             </ul>
-        </nav>
-    </header>
-
+        </nav> 
+        </header>  -->
+    <h1>Offres de Stage</h>
     <section id="entreprise">
         <h2>Nom de l'entreprise</h2>
         <div class="info_public">
@@ -30,9 +30,9 @@
             <button onclick="stagiaire()">Stagiaire</button>
         </div>
     </section>
-
-    <footer>
+<!-- 
+        <footer>
         <p>&copy; 2025 Plateforme de Stage - Tous droits réservés</p>
-    </footer>
+    </footer>  -->
 </body>
 </html>
