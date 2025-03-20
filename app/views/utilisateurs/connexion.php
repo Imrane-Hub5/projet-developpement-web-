@@ -1,17 +1,7 @@
 <?php include('../includes/header.php'); ?>
 
 <body>
-    <header class="header">
-        <div class="logo">EasyStage</div>
-        <div class="icons">
-            <div class="notification">
-                <span class="icon">🔔</span>
-                <span class="badge">1</span>
-            </div>
-            <div class="profile">👤</div>
-            <div class="menu">☰</div>
-        </div>
-    </header>
+
 
     <main class="connexion-container">
         <h2>SE CONNECTER</h2>
