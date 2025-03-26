@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EasyStage - Offres de Stages</title>
     <link rel="stylesheet" href="/public/assets/css/style.css">
-</head>
+    </head>
 
 <body>
 
 <header>
     <div class="header-container">
         <div class="logo">
-            <a href="/webtest/views/index.php">
+            <a href="index.php">
                 <img src="/public/assets/images/logo.png" alt="EasyStage Logo">
             </a>
         </div>
@@ -31,10 +31,10 @@
 
 
     <nav id="navbar">
-            <a href="/webtest/views/index.php">Accueil</a>
-            <a href="/webtest/views/offres.php">Offres</a>
-            <a href="/webtest/views/utilisateurs/connexion.php">Connexion</a>
-            <a href="/webtest/views/utilisateurs/inscription.php">Inscription</a>
+            <a href="index.php">Accueil</a>
+            <a href="../app/views/offres.php">Offres</a>
+            <a href="../app/views/utilisateurs/connexion.php">Connexion</a>
+            <a href="../app/views/utilisateurs/inscription.php">Inscription</a>
     </nav>
 
 </header>
