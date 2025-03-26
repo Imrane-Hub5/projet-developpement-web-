@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'app/views/includes/header.php'; ?>
 
 <main class="main-content"> 
     <!-- Section de recherche -->
