@@ -12,7 +12,7 @@
 <header>
     <div class="header-container">
         <div class="logo">
-            <a href="index.php">
+            <a href="/index.php">
                 <img src="/public/assets/images/logo.png" alt="EasyStage Logo">
             </a>
         </div>
@@ -31,23 +31,13 @@
 
 
     <nav id="navbar">
-            <a href="index.php">Accueil</a>
-            <a href="../app/views/offres.php">Offres</a>
-            <a href="../app/views/utilisateurs/connexion.php">Connexion</a>
-            <a href="../app/views/utilisateurs/inscription.php">Inscription</a>
+            <a href="/index.php">Accueil</a>
+            <a href="/app/views/offres.php">Offres</a>
+            <a href="/app/views/utilisateurs/connexion.php">Connexion</a>
+            <a href="/app/views/utilisateurs/inscription.php">Inscription</a>
     </nav>
 
 </header>
 
-<!-- Fenêtre modale
-<div id="profileModal" class="modal">
-    <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Suivre mes candidatures, enregistrer mon CV, programmer mes alertes...</p>
-        <button class="btn-red">Créer mon profil</button>
-        <hr>
-        <p>De retour ?</p>
-        <button class="btn-black">Me connecter</button>
-    </div>
-</div>
-x   
+
+
