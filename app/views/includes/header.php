@@ -30,12 +30,13 @@
     </div>
 
 
-    <nav id="navbar">
-            <a href="/index.php">Accueil</a>
-            <a href="/app/views/offres.php">Offres</a>
-            <a href="/app/views/utilisateurs/connexion.php">Connexion</a>
-            <a href="/app/views/utilisateurs/inscription.php">Inscription</a>
-    </nav>
+<nav id="navbar" class="mobile-menu">
+    <a href="/index.php">Accueil</a>
+    <a href="/app/views/offres.php">Offres</a>
+    <a href="/app/views/utilisateurs/connexion.php">Connexion</a>
+    <a href="/app/views/utilisateurs/inscription.php">Inscription</a>
+</nav>
+
 
 </header>
 
