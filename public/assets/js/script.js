@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log("Erreur : Impossible de trouver les éléments du menu !");
     }
 });
-//-------------------------------------------------------------------------------------------------------------MENU BURGER-
+//--------------------------------------------------------------------------------------MENU BURGER-
 
 
 
