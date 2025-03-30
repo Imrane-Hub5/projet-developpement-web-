@@ -10,7 +10,7 @@
 
   <!-- Split Section 1 -->
   <section class="split-section">
-    <img src="/public/assets/images/hero-students.png" alt="Étudiants heureux">
+    <img src="/public/assets/images/hero-students.jpg" alt="Étudiants heureux">
     <div class="split-text">
       <h2>Une alternance qui te ressemble</h2>
       <p>Tu cherches une alternance à partir de septembre ? EasyStage te guide vers les offres adaptées à ton profil.</p>
@@ -38,24 +38,30 @@
     </div>
   </section>
 
-  <!-- Section Par Domaine -->
-  <section class="domains">
-    <h2 style="text-align:center; margin-bottom: 30px;">Par domaine</h2>
-    <div class="domain-list">
-      <div class="domain-card">
-        <img src="/public/assets/images/dev-icon.png" alt="Développement">
-        <p>Développement</p>
-      </div>
-      <div class="domain-card">
-        <img src="/public/assets/images/marketing-icon.png" alt="Marketing">
-        <p>Marketing</p>
-      </div>
-      <div class="domain-card">
-        <img src="/public/assets/images/design-icon.png" alt="Design">
-        <p>Design</p>
-      </div>
-    </div>
-  </section>
+  <!-- Intro Domaine -->
+<section class="domain-intro">
+  <h2>Découvre tous les domaines sur EasyStage</h2>
+  <p>Peu importe ton profil ou ton projet, EasyStage regroupe une grande diversité de domaines pour t’aider à trouver la mission qui te correspond vraiment.</p>
+</section>
+
+<!-- Section Par Domaine -->
+<section class="domains">
+  <h2>Par domaine</h2>
+  <div class="domain-list">
+    <div class="domain-card"><p>Développement</p></div>
+    <div class="domain-card"><p>Marketing</p></div>
+    <div class="domain-card"><p>Design</p></div>
+    <div class="domain-card"><p>Ressources Humaines</p></div>
+    <div class="domain-card"><p>Finance</p></div>
+    <div class="domain-card"><p>Data / IA</p></div>
+    <div class="domain-card"><p>Communication</p></div>
+    <div class="domain-card"><p>Juridique</p></div>
+    <div class="domain-card"><p>Gestion de projet</p></div>
+    <div class="domain-card"><p>Logistique</p></div>
+    <div class="domain-card"><p>Ingénierie</p></div>
+    <div class="domain-card"><p>CyberSécurité</p></div>
+  </div>
+</section>
 
   <!-- Offres récentes -->
   <section class="recent-offers">
