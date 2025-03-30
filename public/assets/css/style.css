@@ -185,13 +185,13 @@ nav a:hover {
 }
 
 .split-text .btn:hover, .split-text button:hover {
-  background: #003f73;
+  background: #4294ff;
   transform: scale(1.05);
 }
 
 /* section cv */
 .cv-match-card {
-    background: white;
+    background: #387297;
     padding: 40px 30px;
     margin: 60px auto;
     max-width: 600px;
@@ -212,7 +212,7 @@ nav a:hover {
   }
   
   .cv-match-card button {
-    background: #00274D;
+    background: #397399;
     color: white;
     border: none;
     padding: 12px 24px;
@@ -227,12 +227,15 @@ nav a:hover {
     transform: scale(1.05);
   }
   
+  .cv-match-card h2{
+    
+  }
 /* Section domaines -------------------------------------------- */
 
 .domain-intro {
     text-align: center;
     padding: 80px 5vw 40px;
-    background: #d1e6f7;
+    background: #0b2134;
   }
   
   .domain-intro h2 {
@@ -253,7 +256,7 @@ nav a:hover {
   .domains {
     position: relative;
     padding: 60px 5vw;
-    background: #d1e6f7;
+    background:#0b1822;
     overflow: hidden;
   }
   
@@ -274,7 +277,7 @@ nav a:hover {
   .domain-header {
     text-align: center;
     padding: 80px 5vw 40px;
-    background: #d1e6f7;
+    background: #0b1822;
   }
   
   .domain-header h2 {
@@ -361,7 +364,7 @@ nav a:hover {
     font-size: clamp(28px, 2vw + 1rem, 48px);
     font-weight: 700;
     margin-bottom: 30px;
-    color: #00274D;
+    color: #ffffff;
   }
   .offer-item:hover {
     transform: translateY(-5px);
@@ -608,6 +611,96 @@ footer {
     background-color: #003f73;
   }
   
+
+  /* dark mode */
+
+  /* 🌙 Mode Sombre -------------------------------------------------- */
+  body {
+    background: linear-gradient(to bottom right, #0d1b2a, #1b263b);
+    color: #e0e6ed;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #1b263b, #0d1b2a);
+    color: white;
+  }
+  
+  .hero {
+    background: linear-gradient(135deg, #1b263b, #0f1e33);
+    color: #f0f0f0;
+  }
+  
+  .split-section {
+    background-color: #223043;
+  }
+  
+  .split-text p,
+  .domain-header p,
+  .domain-intro p,
+  .offer-item .info,
+  .input-group label,
+  .privacy-policy {
+    color: #b0bec5;
+  }
+  
+  .split-text button,
+  .hero .btn,
+  .cv-match-card button,
+  .btn,
+  .btn-outline {
+    background-color: #0d1b2a;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .split-text button:hover,
+  .hero .btn:hover,
+  .cv-match-card button:hover,
+  .btn:hover,
+  .btn-outline:hover {
+    background-color: #1e2d44;
+    color: #fff;
+  }
+  
+  .domain-card {
+    background: #1c2c3c;
+    color: white;
+  }
+  
+  .offer-item {
+    background: #1a2636;
+    color: white;
+  }
+  
+  .offer-item .tag {
+    background: #29394f;
+    color: #90caf9;
+  }
+  
+  .favorite-btn {
+    background: #0d1b2a;
+    color: white;
+  }
+  
+  .favorite-btn:hover {
+    background: #13263b;
+  }
+  
+  footer {
+    background: #0d1b2a;
+    color: white;
+  } 
+
+  /* fondu de couleur   */
+  .domain-intro,
+.domains,
+.recent-offers {
+  background: linear-gradient(to bottom, #0f1e33, #132a43); /* dégradé doux bleu foncé */
+}
+
+.hero {
+    background: linear-gradient(to bottom, #132a43, #1b3555);
+  }
 /* Responsive -------------------------------------------------- */
 @media screen and (max-width: 768px) {
   .burger-menu {
