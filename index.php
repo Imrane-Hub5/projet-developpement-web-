@@ -29,14 +29,12 @@
   </section>
 
   <!-- Section Match CV -->
-  <section class="split-section">
-    <img src="/public/assets/images/cv-match.png" alt="CV Match">
-    <div class="split-text">
-      <h2>Matchez votre CV</h2>
-      <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
-      <button class="btn">Importer mon CV</button>
-    </div>
-  </section>
+  <section class="cv-match-card">
+  <h2>Matchez votre CV</h2>
+  <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
+  <button>Importer mon CV</button>
+</section>
+
 
   <!-- Intro Domaine -->
 <section class="domain-intro">
@@ -46,42 +44,83 @@
 
 <!-- Section Par Domaine -->
 <section class="domains">
-  <h2>Par domaine</h2>
-  <div class="domain-list">
-    <div class="domain-card"><p>Développement</p></div>
-    <div class="domain-card"><p>Marketing</p></div>
-    <div class="domain-card"><p>Design</p></div>
-    <div class="domain-card"><p>Ressources Humaines</p></div>
-    <div class="domain-card"><p>Finance</p></div>
-    <div class="domain-card"><p>Data / IA</p></div>
-    <div class="domain-card"><p>Communication</p></div>
-    <div class="domain-card"><p>Juridique</p></div>
-    <div class="domain-card"><p>Gestion de projet</p></div>
-    <div class="domain-card"><p>Logistique</p></div>
-    <div class="domain-card"><p>Ingénierie</p></div>
-    <div class="domain-card"><p>CyberSécurité</p></div>
+  <div class="domain-header">
+    <h2>Explore les domaines disponibles</h2>
+    <p>Découvre tous les domaines dans lesquels tu peux postuler sur EasyStage</p>
+  </div>
+  <div class="domain-scroll-container">
+    <button class="scroll-btn left">&lt;</button>
+    <div class="domain-list">
+      <div class="domain-card">Développement</div>
+      <div class="domain-card">Marketing</div>
+      <div class="domain-card">Design</div>
+      <div class="domain-card">Ressources Humaines</div>
+      <div class="domain-card">Finance</div>
+      <div class="domain-card">Data / IA</div>
+      <div class="domain-card">Communication</div>
+      <div class="domain-card">Product Design</div>
+      <div class="domain-card">CyberSécurité</div>
+      <div class="domain-card">UX/UI</div>
+      <div class="domain-card">IT</div>
+      <div class="domain-card">Support Technique</div>
+      <div class="domain-card">Gestion de projet</div>
+      <div class="domain-card">Événementiel</div>
+      <div class="domain-card">Commerce</div>
+      <div class="domain-card">Stratégie</div>
+    </div>
+    <button class="scroll-btn right">&gt;</button>
   </div>
 </section>
 
+
   <!-- Offres récentes -->
   <section class="recent-offers">
-    <h2 style="text-align:center; margin-bottom: 30px;">Offres récentes</h2>
-    <div class="offer-list">
-      <div class="offer-item">
-        <h3>Développeur Web</h3>
-        <p>📅 3 mois</p>
-        <p>📍 Lille</p>
-        <p>💼 Télétravail partiel</p>
-        <button>❤️</button>
-      </div>
-      <div class="offer-item">
-        <h3>Chargé Marketing</h3>
-        <p>📅 6 mois</p>
-        <p>📍 Paris</p>
-        <p>💼 Présentiel</p>
-        <button>❤️</button>
-      </div>
-    </div>
+  <h2>Offres récentes</h2>
+<!-- à remplacer plus tard par php bdd  -->
+<div class="offer-list">
+
+<div class="offer-item">
+  <span class="tag">Développement</span>
+  <h3>Développeur Web</h3>
+  <p class="info">3 mois - Lille - Télétravail partiel</p>
+  <button class="favorite-btn">+</button>
+</div>
+
+<div class="offer-item">
+  <span class="tag">Marketing</span>
+  <h3>Chargé(e) de Communication</h3>
+  <p class="info">6 mois - Paris - Présentiel</p>
+  <button class="favorite-btn">+</button>
+</div>
+
+<div class="offer-item">
+  <span class="tag">Design</span>
+  <h3>UI/UX Designer</h3>
+  <p class="info">4 mois - Lyon - Hybride</p>
+  <button class="favorite-btn">+</button>
+</div>
+
+<div class="offer-item">
+  <span class="tag">Data / IA</span>
+  <h3>Data Analyst Junior</h3>
+  <p class="info">5 mois - Toulouse - Télétravail complet</p>
+  <button class="favorite-btn">+</button>
+</div>
+
+<div class="offer-item">
+  <span class="tag">Finance</span>
+  <h3>Assistant Comptable</h3>
+  <p class="info">2 mois - Marseille - Présentiel</p>
+  <button class="favorite-btn">+</button>
+</div>
+
+<div class="offer-item">
+  <span class="tag">Gestion de projet</span>
+  <h3>Assistant Chef de Projet</h3>
+  <p class="info">6 mois - Nantes - Hybride</p>
+  <button class="favorite-btn">+</button>
+</div>
+</div>
   </section>
 
 </main>
