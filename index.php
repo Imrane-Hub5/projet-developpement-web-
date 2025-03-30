@@ -1,73 +1,83 @@
 <?php include 'app/views/includes/header.php'; ?>
 
-<main class="main-content"> 
-    <!-- Section de recherche -->
-    <section class="search">
-        <h1>1001 Offres de Stages</h1>
-        <input type="text" placeholder="Trouvez votre stage dès maintenant...">
-    </section>
+<main class="main-content">
 
-    <!-- Section Alternance et Stage -->
-    <section class="offers">
-        <div class="offer-card">
-            <h2>Alternance</h2>
-            <p>Vous recherchez votre alternance à partir de septembre ? Découvrez nos offres.</p>
-            <button>Je postule</button>
-        </div>
-        <div class="offer-card">
-            <h2>Stage</h2>
-            <p>Vous recherchez un stage ? Des centaines d'offres disponibles, postulez dès maintenant !</p>
-            <button>Je postule</button>
-        </div>
-    </section>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Construis ton avenir avec EasyStage</h1>
+    <p>Découvre les opportunités de stages et d’alternance qui te correspondent. Construit ton expérience professionnelle dès aujourd’hui.</p>
+  </section>
 
-    <!-- Section Match CV -->
-    <section class="match-cv">
-        <h2>Matchez votre CV</h2>
-        <p>Découvrez les jobs qui vous correspondent en faisant matcher votre CV avec nos offres d'emploi !</p>
-        <button>Importer mon CV</button>
-    </section>
-
-    <!-- Section Par Domaine -->
-    <section class="domains">
-        <h2>Par domaine :</h2>
-        <div class="domain-list">
-            <div class="domain-card">
-                <img src="../assets/dev-icon.png" alt="Développement">
-                <p>Développement</p>
-            </div>
-        <div class="domain-card">
-            <img src="../assets/marketing-icon.png" alt="Marketing">
-            <p>Marketing</p>
-        </div>
-        <div class="domain-card">
-            <img src="../assets/design-icon.png" alt="Design">
-            <p>Design</p>
-        </div>
+  <!-- Split Section 1 -->
+  <section class="split-section">
+    <img src="/public/assets/images/hero-students.png" alt="Étudiants heureux">
+    <div class="split-text">
+      <h2>Une alternance qui te ressemble</h2>
+      <p>Tu cherches une alternance à partir de septembre ? EasyStage te guide vers les offres adaptées à ton profil.</p>
+      <button class="btn">Voir les offres</button>
     </div>
-    </section>
+  </section>
 
-    <!-- Section Offres récentes -->
-    <section class="recent-offers">
-        <h2>Offres récentes</h2>
-        <div class="offer-list">
-            <div class="offer-item">
-                <h3>Titre de l'offre</h3>
-                <p>📅 2 mois</p>
-                <p>📍 Lieu</p>
-                <p>💼 TT Possible</p>
-                <button>❤️</button>
-            </div>
-            <div class="offer-item">
-                <h3>Titre de l'offre</h3>
-                <p>📅 2 mois</p>
-                <p>📍 Lieu</p>
-                <p>💼 TT Possible</p>
-                <button>❤️</button>
-            </div>
-        </div>
-    </section>
+  <!-- Split Section 2 (reverse) -->
+  <section class="split-section reverse">
+    <img src="/public/assets/images/teamwork.png" alt="Travail en équipe">
+    <div class="split-text">
+      <h2>Stage de rêve ? Il est ici</h2>
+      <p>Des centaines d’offres de stage disponibles. Postule dès maintenant et démarre ton aventure professionnelle.</p>
+      <button class="btn">Explorer les stages</button>
+    </div>
+  </section>
+
+  <!-- Section Match CV -->
+  <section class="split-section">
+    <img src="/public/assets/images/cv-match.png" alt="CV Match">
+    <div class="split-text">
+      <h2>Matchez votre CV</h2>
+      <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
+      <button class="btn">Importer mon CV</button>
+    </div>
+  </section>
+
+  <!-- Section Par Domaine -->
+  <section class="domains">
+    <h2 style="text-align:center; margin-bottom: 30px;">Par domaine</h2>
+    <div class="domain-list">
+      <div class="domain-card">
+        <img src="/public/assets/images/dev-icon.png" alt="Développement">
+        <p>Développement</p>
+      </div>
+      <div class="domain-card">
+        <img src="/public/assets/images/marketing-icon.png" alt="Marketing">
+        <p>Marketing</p>
+      </div>
+      <div class="domain-card">
+        <img src="/public/assets/images/design-icon.png" alt="Design">
+        <p>Design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offres récentes -->
+  <section class="recent-offers">
+    <h2 style="text-align:center; margin-bottom: 30px;">Offres récentes</h2>
+    <div class="offer-list">
+      <div class="offer-item">
+        <h3>Développeur Web</h3>
+        <p>📅 3 mois</p>
+        <p>📍 Lille</p>
+        <p>💼 Télétravail partiel</p>
+        <button>❤️</button>
+      </div>
+      <div class="offer-item">
+        <h3>Chargé Marketing</h3>
+        <p>📅 6 mois</p>
+        <p>📍 Paris</p>
+        <p>💼 Présentiel</p>
+        <button>❤️</button>
+      </div>
+    </div>
+  </section>
+
 </main>
-<script src="../js/script.js"></script>
 
 <?php include 'app/views/includes/footer.php'; ?>
