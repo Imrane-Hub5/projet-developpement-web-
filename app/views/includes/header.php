@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="/public/assets/css/style.css">
     </head>
 
-<body>
+<body class="dark-mode">
+
 
 <header>
     <div class="header-container">
