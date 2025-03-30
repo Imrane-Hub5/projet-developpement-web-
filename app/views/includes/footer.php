@@ -11,6 +11,8 @@
         <a href="#">Confidentialité</a>
         <a href="#">Cookies</a>
     </div>
+    <script src="/public/assets/js/script.js"></script>
+
 </footer>
 </body>
 </html>
