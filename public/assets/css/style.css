@@ -189,7 +189,46 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* section cv */
+.cv-match-card {
+    background: white;
+    padding: 40px 30px;
+    margin: 60px auto;
+    max-width: 600px;
+    text-align: center;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+  
+  .cv-match-card h2 {
+    font-size: clamp(24px, 1.5vw + 1rem, 40px);
+    margin-bottom: 15px;
+  }
+  
+  .cv-match-card p {
+    font-size: clamp(14px, 1vw + 0.4rem, 20px);
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .cv-match-card button {
+    background: #00274D;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cv-match-card button:hover {
+    background: #003f73;
+    transform: scale(1.05);
+  }
+  
 /* Section domaines -------------------------------------------- */
+
 .domain-intro {
     text-align: center;
     padding: 80px 5vw 40px;
@@ -209,89 +248,171 @@ nav a:hover {
     color: #333;
   }
   
-.domains {
-  padding: 60px 5vw;
-  background: #d1e6f7;
-}
-
-.domains .domain-list {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  gap: 20px;
-  padding-bottom: 20px;
-}
-
-.domain-card {
-  min-width: 180px;
-  background: white;
-  border-radius: 12px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
-}
-
-.domain-card img {
-  height: 50px;
-  margin-bottom: 10px;
-}
-
-.domain-card:hover {
-  transform: translateY(-5px);
-}
-
-.domains h2 {
+  /* Bloc complet avec scroll et flèches */
+  
+  .domains {
+    position: relative;
+    padding: 60px 5vw;
+    background: #d1e6f7;
+    overflow: hidden;
+  }
+  
+  .domains h2 {
     text-align: center;
     margin-bottom: 30px;
   }
   
+  .domain-list {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    scroll-behavior: smooth;
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+  .domain-header {
+    text-align: center;
+    padding: 80px 5vw 40px;
+    background: #d1e6f7;
+  }
+  
+  .domain-header h2 {
+    font-size: clamp(28px, 2vw + 1rem, 48px);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .domain-header p {
+    font-size: clamp(16px, 1vw + 0.3rem, 22px);
+    max-width: 800px;
+    margin: 0 auto; /* <-- important pour centrer */
+    color: #333;
+  }
+  
+  .domain-card {
+    min-width: 180px;
+    height: 100px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+  }
+  
+  .domain-card p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 1rem;
+  }
+  
+  .domain-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Boutons scroll */
+  
+  .scroll-btn {
+    background-color: #00274D;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .scroll-btn.left {
+    left: 10px;
+  }
+  
+  .scroll-btn.right {
+    right: 10px;
+  }
+  
+  
 
 /* Section offres récentes ------------------------------------- */
-.recent-offers {
-  padding: 60px 5vw;
-  background: #d1e6f7;
-}
-
-.recent-offers .offer-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-}
-
 .offer-item {
-  background: white;
-  padding: 20px;
-  border-radius: 16px;
-  width: 280px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.offer-item h3 {
-  margin-bottom: 10px;
-}
-
-.offer-item p {
-  font-size: 14px;
-  margin: 4px 0;
-}
-
-.offer-item button {
-  margin-top: 10px;
-  background: #004080;
-  border: none;
-  color: white;
-  padding: 10px 16px;
-  border-radius: 20px;
-  cursor: pointer;
-}
-
-.offer-item button:hover {
-  background: #0059b3;
-  transform: scale(1.05);
-}
-
+    background: white;
+    padding: 25px 20px;
+    border-radius: 28px;
+    width: 100%;
+    max-width: 350px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: transform 0.3s ease;
+    position: relative;
+  }
+  .recent-offers h2{
+    text-align: center;
+    font-size: clamp(28px, 2vw + 1rem, 48px);
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #00274D;
+  }
+  .offer-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .offer-item h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  .offer-item .tag {
+    background-color: #eee;
+    color: #333;
+    padding: 5px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    display: inline-block;
+    width: fit-content;
+  }
+  
+  .offer-item .info {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .favorite-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #00274D;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s;
+  }
+  
+  .favorite-btn:hover {
+    background: #004080;
+    transform: scale(1.1);
+  }
+  
+  .offer-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
 /* Footer ------------------------------------------------------- */
 footer {
   background: #00274D;
