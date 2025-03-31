@@ -1,4 +1,3 @@
--- Créer la base si besoin
 CREATE DATABASE IF NOT EXISTS easystage;
 USE easystage;
 
