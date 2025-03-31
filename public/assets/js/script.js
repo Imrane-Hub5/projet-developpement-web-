@@ -37,31 +37,5 @@ function toggleMenu() {
   });
   
 
-  // valider le formulaier d'inscription
-  function validateForm() {
-    const email = document.getElementById('email').value.trim();
-    const password = document.getElementById('password').value;
-    const errorMsg = document.getElementById('error-message');
-    errorMsg.style.display = 'none';
-  
-    const emailRegex = /^[\w\-.]+@([\w-]+\.)+[\w-]{2,4}$/;
-    const phoneRegex = /^0[6-7]\d{8}$/;
-  
-    // Vérification email ou téléphone
-    if (!emailRegex.test(email) && !phoneRegex.test(email)) {
-      errorMsg.textContent = "Veuillez entrer un email ou un numéro de téléphone valide.";
-      errorMsg.style.display = 'block';
-      return false;
-    }
-  
-    // Vérification du mot de passe
-    const pwdRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/;
-    if (!pwdRegex.test(password)) {
-      errorMsg.textContent = "Le mot de passe doit contenir au moins 8 caractères, une majuscule, un chiffre et un caractère spécial.";
-      errorMsg.style.display = 'block';
-      return false;
-    }
-  
-    return true;
-  }
+// Page inscription dynamique²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
   
