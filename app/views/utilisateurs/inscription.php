@@ -3,16 +3,15 @@
 <main class="inscription-container">
     <form class="form-card" action="traitement_inscription.php" method="post" enctype="multipart/form-data">
         <h2 class="form-title">Créer ton compte</h2>
-        <p class="form-subtitle">Choisis ton rôle pour personnaliser ton expérience 🧭</p>
+        <p class="form-subtitle">Dis-nous qui tu es pour personnaliser ton expérience 🧭</p>
 
-        <!-- Sélecteur de rôle -->
-        <div class="role-selection">
-            <input type="radio" id="candidat" name="role" value="candidat" required>
-            <label for="candidat">Je suis étudiant</label>
-
-            <input type="radio" id="entreprise" name="role" value="entreprise" required>
-            <label for="entreprise">Je suis une entreprise</label>
+        <!-- Choix du rôle avec boutons -->
+        <div class="role-selection-buttons">
+            <button type="button" id="btn-candidat" class="role-btn">Je suis étudiant</button>
+            <button type="button" id="btn-entreprise" class="role-btn">Je suis une entreprise</button>
         </div>
+
+        <input type="hidden" name="role" id="roleInput">
 
         <!-- Formulaire ÉTUDIANT -->
         <div id="form-candidat" class="form-section" style="display: none;">
@@ -158,4 +157,31 @@
     </form>
 </main>
 
+
+<!-- code js pour inscription  -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const btnCandidat = document.getElementById("btn-candidat");
+    const btnEntreprise = document.getElementById("btn-entreprise");
+    const formCandidat = document.getElementById("form-candidat");
+    const formEntreprise = document.getElementById("form-entreprise");
+    const roleInput = document.getElementById("roleInput");
+    const roleSection = document.querySelector(".role-selection-buttons");
+
+    btnCandidat.addEventListener("click", function () {
+        roleSection.style.display = "none";
+        roleInput.value = "candidat";
+        formCandidat.style.display = "block";
+    });
+
+    btnEntreprise.addEventListener("click", function () {
+        roleSection.style.display = "none";
+        roleInput.value = "entreprise";
+        formEntreprise.style.display = "block";
+    });
+});
+</script>
+
+
 <?php include('../includes/footer.php'); ?>
+
