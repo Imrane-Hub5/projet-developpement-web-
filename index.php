@@ -1,4 +1,11 @@
-<?php include 'app/views/includes/header.php'; ?>
+<?php include 'app/views/includes/header.php';
+if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === 'POST') {
+    setcookie("cookiesAccepted", "true", time() + 31536000, "/"); // Expire dans 1 an
+    echo json_encode(["status" => "success"]);
+    exit;
+}
+?>
+
 
 <main class="main-content">
 
