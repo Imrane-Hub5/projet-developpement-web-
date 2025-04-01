@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Vérification du mot de passe
         if (!password || password.length < 8) {
-            alert("Merci de saisir un mot de passe d'au moins 8 caractères.");
+            alert("mot de passe incorrect");
             e.preventDefault(); // Empêche l'envoi du formulaire
             return;
         }
