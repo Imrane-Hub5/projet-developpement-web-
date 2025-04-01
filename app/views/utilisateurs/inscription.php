@@ -38,11 +38,7 @@
             <button type="button" id="btn-entreprise" class="role-btn">Je suis une entreprise</button>
         <!-- Étape 0 : Choix du rôle -->
         <div id="step-role" class="step">
-            <div class="role-selection-buttons">
-                <button type="button" id="btn-etudiant" class="role-btn">Je suis étudiant</button>
-                <button type="button" id="btn-entreprise" class="role-btn">Je suis une entreprise</button>
-            </div>
-        </div>
+    
 
         <!-- Étape 1 : Infos de base -->
         <div id="step-1" class="step" style="display: none;">
