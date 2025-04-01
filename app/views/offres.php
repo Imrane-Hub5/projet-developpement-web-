@@ -1,5 +1,6 @@
 
 <?php include('includes/header.php'); ?>
+<?php include('app\controllers\OffreController.php'); ?>
 
 <body>
 
