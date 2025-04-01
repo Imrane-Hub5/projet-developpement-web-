@@ -12,8 +12,14 @@
     <h2 class="form-title">Créer ton compte</h2>
         <p class="form-subtitle">Choisis ton rôle pour personnaliser ton expérience ✨</p>
 
-        <!-- Étape 0 : Choix du rôle -->
-        <div id="step-role" class="step">
+<!-- Étape 0 : Choix du rôle -->
+<div id="step-role" class="step">
+    <div class="role-selection-buttons" style="display: flex; justify-content: center; gap: 2rem; margin-top: 2rem;">
+        <button type="button" id="btn-etudiant" class="role-btn">Je suis étudiant</button>
+        <button type="button" id="btn-entreprise" class="role-btn">Je suis une entreprise</button>
+    </div>
+</div>
+
     
 
         <!-- Étape 1 : Infos de base -->
