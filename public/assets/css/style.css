@@ -644,6 +644,22 @@ footer {
     color: #004080;
     text-decoration: underline;
   }
+
+  .btn-back {
+    margin-top: 15px;
+    background-color: transparent;
+    color: #004080;
+    border: none;
+    font-size: 0.95rem;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: color 0.2s ease;
+  }
+  
+  .btn-back:hover {
+    color: #00274D;
+  }
+  
   
   /* =============================
      BOUTON DE VALIDATION
