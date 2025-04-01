@@ -1,33 +1,3 @@
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const cookiePopup = document.getElementById("cookiePopup");
-        const acceptBtn = document.getElementById("acceptCookies");
-        const body = document.body;
-
-        // Vérifie si l'utilisateur a déjà accepté les cookies
-        if (!localStorage.getItem("cookiesAccepted")) {
-            setTimeout(() => {
-                cookiePopup.classList.add("show");
-                body.classList.add("blur-background"); // Active le flou en arrière-plan
-            }, 2000); // Apparition après 2 secondes
-        }
-
-        // Gestion du clic sur "Accepter"
-        acceptBtn.addEventListener("click", function () {
-            localStorage.setItem("cookiesAccepted", "true");
-            
-            // Ajoute une transition de disparition
-            cookiePopup.style.opacity = "0";
-            setTimeout(() => {
-                cookiePopup.style.display = "none"; 
-                body.classList.remove("blur-background"); // Retire le flou de l'arrière-plan
-            }, 500); // Disparition fluide
-        });
-    });
-    </script>
-
-
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -38,16 +8,6 @@
     </head>
 
 <body class="dark-mode">
-    <div class="cookie-popup" id="cookiePopup">
-    <p>🍪 Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre 
-       <a href="politique-cookies.php">politique de cookies</a>.
-    </p>
-    <button id="acceptCookies">Accepter</button>
-    </div>
-
-
-</body>
-
 
 
 
