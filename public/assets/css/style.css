@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
 }
 
 
@@ -18,6 +19,7 @@ html, body {
   color: #1f1f1f;
   font-size: clamp(16px, 1.2vw + 1rem, 24px); /* taille responsive plus harmonieuse */
   overflow-x: hidden;
+  
 }
 
 /* Header ------------------------------------------------------ */
@@ -27,6 +29,7 @@ header {
   padding: 20px;
   width: 100%;
   box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
 }
 
 .header-container {
@@ -431,12 +434,14 @@ nav a:hover {
   }
 /* Footer ------------------------------------------------------- */
 footer {
-  background: #00274D;
+  background: #0d1b2a;
   color: white;
   padding: 20px;
   text-align: center;
   font-size: 14px;
   margin-top: 40px;
+ 
+  
 }
 
 
@@ -772,11 +777,7 @@ footer {
   .favorite-btn:hover {
     background: #13263b;
   }
-  
-  footer {
-    background: #0d1b2a;
-    color: white;
-  } 
+
 
   /* fondu de couleur   */
   .domain-intro,
@@ -866,13 +867,6 @@ footer {
 }
 
 /* offre -------------------------------------------------- */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #dbeef8;
-  margin: 0;
-  padding: 20px;
-  text-align: left;
-}
 
 h2 {
   color: #8cb7d6;
