@@ -8,7 +8,7 @@ file_put_contents(__DIR__ . "/debug_log.txt", "Formulaire reçu !\n", FILE_APPEN
 $host = '127.0.0.1';
 $dbname = 'easystage';
 $dbuser = 'root'; 
-$dbpass = ''; // adapte ici si tu mets un mot de passe
+$dbpass = ''; 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = trim($_POST['username'] ?? '');
