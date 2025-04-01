@@ -1,5 +1,5 @@
 <?php
-require_once '../../config/config.php';
+require_once 'app\config\config.php';
 
 // Vérifie si les données sont envoyées en POST
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -50,3 +50,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     echo "⚠️ Accès non autorisé.";
 }
 ?>
+
+
