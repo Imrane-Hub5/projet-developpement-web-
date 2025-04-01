@@ -1,10 +1,5 @@
 <footer>
-    <div class="links">
-        <h3>Liens utiles</h3>
-        <a href="#">Aide</a>
-        <a href="#">Profils recherchés</a>
-        <a href="#">Sitemap</a>
-    </div>
+
     <div class="legal">
         <h3>Informations légales</h3>
         <a href="mentions-legales.php">Mentions légales</a> 
@@ -57,22 +52,54 @@
 </html>
 
 <style> 
-
-/* Footer ------------------------------------------------------- */
 footer {
-  background: #0d1b2a;
-  color: white;
-  padding: 20px;
-  text-align: center;
+  background: linear-gradient(90deg, #0d1b2a, #1b263b);
+  color: #f0f0f0;
+  padding: 40px 20px;
   font-size: 14px;
-  margin-top: 40px;
- 
-  
-  flex-shrink: 0;
+  box-shadow: 0px -4px 12px rgba(0, 0, 0, 0.2);
   position: relative;
-  box-shadow: 0px -2px 8px rgba(0,0,0,0.2);
-  bottom: 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+}
 
+footer h3 {
+  font-size: 16px;
+  color: #66a3ff;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+footer a {
+  display: block;
+  color: #ccc;
+  text-decoration: none;
+  margin: 5px 0;
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+footer .links,
+footer .legal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 200px;
+}
+
+@media (max-width: 600px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
 }
 
 </style>
