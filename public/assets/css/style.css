@@ -3,11 +3,11 @@
 
 /* Reset + base ------------------------------------------------ */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+  box-sizing: border-box;
 }
+
 
 html, body {
   font-family: 'gg Sans', sans-serif;
@@ -17,6 +17,7 @@ html, body {
   height: 100%;
   color: #1f1f1f;
   font-size: clamp(16px, 1.2vw + 1rem, 24px); /* taille responsive plus harmonieuse */
+  overflow-x: hidden;
 }
 
 /* Header ------------------------------------------------------ */
@@ -137,7 +138,7 @@ nav a:hover {
 }
 
 /* Section image + texte --------------------------------------- */
-.split-section {
+/* .split-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -146,7 +147,18 @@ nav a:hover {
   max-width: 100vw;
   background: white;
   gap: 40px;
+} */
+
+.split-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  width: 100%;
+  background: white;
+  gap: 40px;
 }
+
 
 .split-section.reverse {
   flex-direction: row-reverse;
