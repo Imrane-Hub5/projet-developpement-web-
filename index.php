@@ -28,13 +28,6 @@
     </div>
   </section>
 
-  <!-- Section Match CV -->
-  <section class="cv-match-card">
-  <h2>Matchez votre CV</h2>
-  <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
-  <button>Importer mon CV</button>
-</section>
-
 
   <!-- Intro Domaine -->
 <section class="domain-intro">
@@ -75,7 +68,7 @@
 
   <!-- Offres récentes -->
   <section class="recent-offers">
-  <h2>Offres récentes</h2>
+  <h2>Nos offres</h2>
 <!-- à remplacer plus tard par php bdd  -->
 <div class="offer-list">
 
@@ -122,6 +115,15 @@
 </div>
 </div>
   </section>
+
+    <!-- Section Match CV -->
+    <section class="cv-match-card">
+  <h2>Matchez votre CV</h2>
+  <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
+  <button>Importer mon CV</button>
+</section>
+
+
 
 </main>
 
