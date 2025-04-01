@@ -1,3 +1,7 @@
+<?php if (isset($_SESSION['user_id'])): ?>
+    <a href="logout.php">Déconnexion</a>
+<?php endif; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
