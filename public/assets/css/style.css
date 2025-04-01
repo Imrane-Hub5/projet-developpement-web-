@@ -7,19 +7,24 @@
   padding: 0;
   box-sizing: border-box;
 
+  
+  
 }
 
 
 html, body {
   font-family: 'gg Sans', sans-serif;
-  background: linear-gradient(to bottom right, #E3F2FD, #d1e6f7);
+  height: 100vh; /* Assurer que tout prend la hauteur de l'écran */
   width: 100%;
   overflow-x: hidden;
-  height: 100%;
+  background: linear-gradient(to bottom right, #E3F2FD, #d1e6f7);
   color: #1f1f1f;
   font-size: clamp(16px, 1.2vw + 1rem, 24px); /* taille responsive plus harmonieuse */
   overflow-x: hidden;
   
+  font-size: clamp(16px, 1.2vw + 1rem, 24px);
+  display: flex;
+  flex-direction: column; 
 }
 
 /* Header ------------------------------------------------------ */
@@ -30,6 +35,7 @@ header {
   width: 100%;
   box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
   flex-shrink: 0;
+ 
 }
 
 .header-container {
@@ -40,7 +46,18 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  padding: 0 2vw;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
 }
 
 .logo img {
@@ -60,6 +77,7 @@ header {
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
+
 
 .header-icons img:hover {
   transform: scale(1.1);
@@ -442,6 +460,11 @@ footer {
   margin-top: 40px;
  
   
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px -2px 8px rgba(0,0,0,0.2);
+  bottom: 0;
+
 }
 
 
@@ -929,4 +952,58 @@ button {
 
 button:hover {
   background: #143349;
+}
+
+
+
+
+
+/*--------------------------cookies-------------------------*/
+
+/* Style du popup */
+.cookie-popup {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #1e3a5f; 
+  color: white;
+  padding: 15px 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; 
+  max-width: 700px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+/* Bouton de confirmation */
+.cookie-popup button {
+  background-color: #336699; 
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+/* Effet visuel au clic */
+.cookie-popup button:active {
+  transform: scale(1);
+}
+
+/* Apparition du popup */
+.cookie-popup.show {
+  opacity: 1;
+  visibility: visible;
+}
+.cookie-popup {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
 }
