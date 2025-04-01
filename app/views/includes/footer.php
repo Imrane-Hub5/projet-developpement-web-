@@ -55,3 +55,24 @@
 
 </body>
 </html>
+
+<style> 
+
+/* Footer ------------------------------------------------------- */
+footer {
+  background: #0d1b2a;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+ 
+  
+  flex-shrink: 0;
+  position: relative;
+  box-shadow: 0px -2px 8px rgba(0,0,0,0.2);
+  bottom: 0;
+
+}
+
+</style>
