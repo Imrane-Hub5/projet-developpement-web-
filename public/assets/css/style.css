@@ -1007,3 +1007,7 @@ button:hover {
   visibility: visible !important;
   transform: translateX(-50%) translateY(0) !important;
 }
+/* Effet au survol et au clic */
+.cookie-popup button:hover, .cookie-popup button:active {
+  transform: scale(1.1); /* Agrandissement */
+}
