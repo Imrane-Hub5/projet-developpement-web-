@@ -6,6 +6,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 html, body {
@@ -852,3 +853,74 @@ footer {
 
 }
 
+/* offre -------------------------------------------------- */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #dbeef8;
+  margin: 0;
+  padding: 20px;
+  text-align: left;
+}
+
+h2 {
+  color: #8cb7d6;
+  margin-top: 20px;
+}
+
+.entreprise {
+  width: 50%;
+  margin: 10px 50px 20px 0;
+  background: #8cb7d6;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.entreprise h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #1b425e;
+}
+
+.info_public {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.info_public p {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: #333;
+}
+
+.info_public img {
+  margin-right: 8px;
+}
+
+.badge {
+  background: #1b425e;
+  color: white;
+  font-size: 12px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+button {
+  background: #1b425e;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #143349;
+}
