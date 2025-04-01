@@ -7,13 +7,14 @@
     </div>
     <div class="legal">
         <h3>Informations légales</h3>
-        <a href="#">Mentions légales</a>
-        <a href="#">Confidentialité</a>
-        <a href="#">Cookies</a>
+        <a href="mentions-legales.php">Mentions légales</a> 
+        <a href="politique-confidentialite.php">Confidentialité</a> >
+        <a href="politique-cookies.php">Cookies</a>
+      
     </div>
     <script src="/public/assets/js/script.js"></script>
-
 </footer>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const cookiePopup = document.getElementById("cookiePopup");
@@ -42,14 +43,15 @@
             }, 500);
         });
     });
-    </script>
+</script>
 
-</body>
+<!-- Popup Cookie -->
 <div class="cookie-popup" id="cookiePopup">
     <p>🍪 Ce site utilise des cookies pour améliorer votre expérience. 
         <a href="politique-cookies.php" style="color: #66a3ff;">En savoir plus</a>.
     </p>
     <button id="acceptCookies">Accepter</button>
 </div>
+
 </body>
 </html>
