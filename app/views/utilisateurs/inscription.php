@@ -5,7 +5,7 @@
         <h2 class="form-title">Créer ton compte</h2>
         <p class="form-subtitle">Dis-nous qui tu es pour personnaliser ton expérience 🧭</p>
 
-        <!-- Choix du rôle avec boutons -->
+       
         <div class="role-selection-buttons">
             <button type="button" id="btn-candidat" class="role-btn">Je suis étudiant</button>
             <button type="button" id="btn-entreprise" class="role-btn">Je suis une entreprise</button>
