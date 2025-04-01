@@ -1011,3 +1011,29 @@ button:hover {
 .cookie-popup button:hover, .cookie-popup button:active {
   transform: scale(1.1); /* Agrandissement */
 }
+
+
+
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; 
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333; 
+}
+
+.legal a {
+  text-decoration: none;
+  color: #007BFF; 
+  transition: color 0.3s ease;
+}
+
+.legal a:hover {
+  color: #0056b3; 
+}
+
+.legal h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
