@@ -2,30 +2,10 @@
 
 <main class="inscription-container">
 
- <!-- ✅ Messages -->
-<?php if (isset($_GET['success']) && $_GET['success'] === 'ok'): ?>
-    <p style="color: green; text-align: center; background-color: #e0ffe0; padding: 10px; border-radius: 8px;">
-        Ton compte a bien été créé ! 🎉 <a href='connexion.php'>Connecte-toi ici</a>.
-    </p>
-<?php elseif (isset($_GET['erreur']) && $_GET['erreur'] === 'existe'): ?>
-    <p style="color: red; text-align: center; background-color: #ffe0e0; padding: 10px; border-radius: 8px;">
-        Un compte avec cet email existe déjà. <a href='connexion.php'>Connecte-toi ici</a>.
-    </p>
-<?php elseif (isset($_GET['erreur']) && $_GET['erreur'] === 'mdp'): ?>
-    <p style="color: red; text-align: center; background-color: #ffe0e0; padding: 10px; border-radius: 8px;">
-        Ton mot de passe doit contenir au moins 8 caractères, une majuscule et un chiffre.
-    </p>
-<?php endif; ?>
-
-<?php if (isset($_GET['success']) && $_GET['success'] === 'ok'): ?>
-    <p style="color: #2e7d32; text-align: center; font-weight: bold; background: #e8f5e9; padding: 10px; border-radius: 8px;">
-    ✅ Ton compte a bien été créé ! <a href="connexion.php" style="color: #2e7d32; text-decoration: underline;">Connecte-toi ici</a>.
-    </p>
-<?php endif; ?>
 
 
 
-    <form class="form-card" action="traitement_inscription.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
+    <form class="form-card" action="../../controllers/traitement_inscription.php" method="post" enctype="multipart/form-data" onsubmit="return validateForm();">
     <input type="hidden" id="role" name="role" value="">
 
    
