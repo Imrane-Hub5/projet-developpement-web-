@@ -5,7 +5,9 @@
 
     <!-- Barre de recherche -->
     <input type="text" id="searchInput" placeholder="Rechercher une offre..." onkeyup="filterOffers()">
-    <button onclick="openFilterPopup()">Filtrer</button>
+    <button onclick="openFilterPopup()">
+        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3208979/filter-icon-md.png" alt="Filtrer" width="30" height="30">
+    </button>
 
     <!-- Pop-up de filtrage -->
     <div id="filterPopup" class="popup">
