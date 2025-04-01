@@ -2,7 +2,7 @@
 define('DB_HOST', 'localhost');
 define('DB_NAME', 'easystage');
 define('DB_USER', 'root');
-define('DB_PASS', 'easystage');
+define('DB_PASS', '');  
 
 
 try {
