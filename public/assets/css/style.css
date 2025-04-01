@@ -3,12 +3,14 @@
 
 /* Reset + base ------------------------------------------------ */
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+
   
   
 }
+
 
 html, body {
   font-family: 'gg Sans', sans-serif;
@@ -17,6 +19,9 @@ html, body {
   overflow-x: hidden;
   background: linear-gradient(to bottom right, #E3F2FD, #d1e6f7);
   color: #1f1f1f;
+  font-size: clamp(16px, 1.2vw + 1rem, 24px); /* taille responsive plus harmonieuse */
+  overflow-x: hidden;
+  
   font-size: clamp(16px, 1.2vw + 1rem, 24px);
   display: flex;
   flex-direction: column; 
@@ -29,6 +34,7 @@ header {
   padding: 20px;
   width: 100%;
   box-shadow: 0px 2px 8px rgba(0,0,0,0.2);
+  flex-shrink: 0;
  
 }
 
@@ -153,7 +159,7 @@ nav a:hover {
 }
 
 /* Section image + texte --------------------------------------- */
-.split-section {
+/* .split-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -162,7 +168,18 @@ nav a:hover {
   max-width: 100vw;
   background: white;
   gap: 40px;
+} */
+
+.split-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px 40px;
+  width: 100%;
+  background: white;
+  gap: 40px;
 }
+
 
 .split-section.reverse {
   flex-direction: row-reverse;
@@ -435,12 +452,14 @@ nav a:hover {
   }
 /* Footer ------------------------------------------------------- */
 footer {
-  background: #00274D;
+  background: #0d1b2a;
   color: white;
   padding: 20px;
   text-align: center;
   font-size: 14px;
   margin-top: 40px;
+ 
+  
   flex-shrink: 0;
   position: relative;
   box-shadow: 0px -2px 8px rgba(0,0,0,0.2);
@@ -781,11 +800,7 @@ footer {
   .favorite-btn:hover {
     background: #13263b;
   }
-  
-  footer {
-    background: #0d1b2a;
-    color: white;
-  } 
+
 
   /* fondu de couleur   */
   .domain-intro,
@@ -875,13 +890,6 @@ footer {
 }
 
 /* offre -------------------------------------------------- */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #dbeef8;
-  margin: 0;
-  padding: 20px;
-  text-align: left;
-}
 
 h2 {
   color: #8cb7d6;

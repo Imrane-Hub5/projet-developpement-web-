@@ -1,46 +1,42 @@
 <?php include('includes/header.php'); ?> 
 
 <body>
-
     <h2>Offres de Stage</h2>
 
     <!-- Barre de recherche -->
     <input type="text" id="searchInput" placeholder="Rechercher une offre..." onkeyup="filterOffers()">
+    <button onclick="openFilterPopup()">
+        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3208979/filter-icon-md.png" alt="Filtrer" width="30" height="30">
+    </button>
 
-    <!-- Filtrage par ville -->
-    <input type="text" id="filterLieu" placeholder="Filtrer par ville...">
-
-    <!-- Curseur pour la durée -->
-    <label for="filterDuree">Durée (mois) :</label>
-    <input type="range" id="filterDuree" min="1" max="24" step="1" value="12" oninput="updateDureeValue()">
-    <span id="dureeValue">12 mois</span>
-
-    <button onclick="applyFilter()">Filtrer</button>
+    <!-- Pop-up de filtrage -->
+    <div id="filterPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeFilterPopup()">&times;</span>
+            <h3>Filtres</h3>
+            <input type="text" id="filterLieu" placeholder="Filtrer par ville...">
+            <label for="filterDuree">Durée (mois) :</label>
+            <input type="range" id="filterDuree" min="1" max="24" step="1" value="12" oninput="updateDureeValue()">
+            <span id="dureeValue">12 mois</span>
+            <button onclick="applyFilter()">Appliquer</button>
+        </div>
+    </div>
 
     <div id="offresContainer">
     <?php
-    // Exemple d'un tableau de données des offres
     $offres = [
-        ["nom" => "offre A", "durée" => "1", "lieu" => "Paris", "ouitt" => "https://cdn-icons-png.flaticon.com/512/93/93624.png"],
-        ["nom" => "offre B", "durée" => "12", "lieu" => "Lille", "ouitt" => ""],
-        ["nom" => "offre C", "durée" => "6", "lieu" => "Lyon", "ouitt" => "https://cdn-icons-png.flaticon.com/512/93/93624.png"],
-        ["nom" => "offre D", "durée" => "18", "lieu" => "Marseille", "ouitt" => ""],
+        ["nom" => "offre A", "duree" => "1", "lieu" => "Paris"],
+        ["nom" => "offre B", "duree" => "12", "lieu" => "Lille"],
+        ["nom" => "offre C", "duree" => "6", "lieu" => "Lyon"],
+        ["nom" => "offre D", "duree" => "18", "lieu" => "Marseille"],
     ];
 
     foreach ($offres as $offre) {
-        echo '<section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["durée"]) . '">
+        echo '<section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
                 <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
                 <div class="info_public">
-                    <span class="badge">' . htmlspecialchars($offre["durée"]) . ' mois</span>
-                    <p><img src="https://cdn-icons-png.flaticon.com/512/5219/5219383.png" width="20" height="20"/> ' . htmlspecialchars($offre["lieu"]) . '</p>';
-        
-        if (!empty($offre["ouitt"])) {
-            echo '<p><img src="' . htmlspecialchars($offre["ouitt"]) . '" width="20" height="20"/></p>';
-        }
-
-        echo '</div>
-                <div class="info_prive">
-                    <button onclick="voirDetails()">Détail</button>
+                    <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>
+                    <p>' . htmlspecialchars($offre["lieu"]) . '</p>
                 </div>
             </section>';
     }
@@ -48,8 +44,12 @@
     </div>
 
     <script>
-        function voirDetails() {
-            alert("Détails de l'offre à afficher ici !");
+        function openFilterPopup() {
+            document.getElementById("filterPopup").style.display = "block";
+        }
+
+        function closeFilterPopup() {
+            document.getElementById("filterPopup").style.display = "none";
         }
 
         function filterOffers() {
@@ -76,6 +76,8 @@
 
                 offer.style.display = (lieuMatch && dureeMatch) ? "block" : "none";
             });
+
+            closeFilterPopup();
         }
 
         function updateDureeValue() {
@@ -84,5 +86,27 @@
         }
     </script>
 
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .popup-content {
+            text-align: center;
+        }
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+    </style>
 </body>
 </html>
