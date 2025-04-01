@@ -38,4 +38,3 @@ function toggleMenu() {
   
 
 // Page inscription dynamique²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²²
-  
