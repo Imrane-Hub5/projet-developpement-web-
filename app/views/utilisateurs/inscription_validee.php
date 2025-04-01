@@ -1,52 +1,52 @@
-<?php include('../includes/header.php'); ?>
+<?php
+session_start();
+$role = $_GET['role'] ?? 'utilisateur';
 
-<main class="inscription-container" style="text-align: center;">
-    <?php
-    $role = isset($_GET['role']) ? $_GET['role'] : 'candidat';
-
-    if ($role === 'entreprise') {
-        $message = "Votre compte entreprise a bien été créé 👏";
-        $sousMessage = "Nous vous redirigeons vers votre espace pour publier vos offres.";
-        $redirect = "../entreprises/entreprise.php";
-    } else {
-        $message = "Bienvenue sur EasyStage 🎓";
-        $sousMessage = "Ton profil étudiant est prêt ! Tu vas pouvoir commencer à chercher ton stage.";
-        $redirect = "profil_etudiant.php";
-    }
-    ?>
-    
-    <h2 class="form-title"><?= $message ?></h2>
-    <p class="form-subtitle"><?= $sousMessage ?></p>
-
-    <img src="../../public/assets/images/logo.png" alt="Logo" style="width: 80px; margin: 20px auto;">
-
-    <p style="margin-top: 20px; color: #444;">Redirection automatique dans quelques secondes...</p>
-
-    <div class="loader" style="margin: 30px auto;"></div>
-</main>
-
-<script>
-// Redirection automatique après 4 secondes
-setTimeout(() => {
-    window.location.href = "<?= $redirect ?>";
-}, 4000);
-</script>
-
-<style>
-.loader {
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #00274D;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    animation: spin 1s linear infinite;
+if ($role === 'candidat') {
+    $message = "Ton compte étudiant a bien été créé 🚀";
+    $redirect = "profil_etudiant.php";
+} elseif ($role === 'entreprise') {
+    $message = "Ton compte entreprise est prêt à être utilisé 👔";
+    $redirect = "profil_entreprise.php";
+} else {
+    $message = "Inscription réussie 🎉";
+    $redirect = "index.php";
 }
+?>
 
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-</style>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inscription validée</title>
+    <link rel="stylesheet" href="../../../public/assets/css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 3rem;
+        }
+        .success-card {
+            background: #f0f9ff;
+            border: 1px solid #bee3f8;
+            padding: 2rem;
+            border-radius: 10px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class="success-card">
+        <h1>✅ Bravo !</h1>
+        <p><?= $message ?></p>
+        <p>Tu vas être redirigé(e) dans quelques secondes...</p>
+        <a href="<?= $redirect ?>">Sinon clique ici</a>
+    </div>
 
-<?php include('../includes/footer.php'); ?>
-    
+    <script>
+        setTimeout(() => {
+            window.location.href = "<?= $redirect ?>";
+        }, 4000);
+    </script>
+</body>
+</html>
