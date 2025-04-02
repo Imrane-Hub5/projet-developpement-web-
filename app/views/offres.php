@@ -98,7 +98,7 @@ $offresAffichees = array_slice($offres, $debut, $offresParPage);
 foreach ($offresAffichees as $offre) {
     echo '
     <section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
-        <button class="btn-wishlist">+</button>
+        <button class="btn-wishlist" data-id="' . $offre['id'] . '">+</button>
         <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
         <div class="info_public">
             <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>
