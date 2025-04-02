@@ -11,6 +11,17 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
 }
 ?>
 
+<<<<<<< Updated upstream
+=======
+<?php
+require_once __DIR__ . '/app/models/OffreModel.php';
+$offreModel = new OffreModel(); // ligne 11 ici
+$offres = $offreModel->getAllOffres();
+?>
+
+
+
+>>>>>>> Stashed changes
 <main class="main-content">
 
   <!-- Hero Section -->
@@ -41,6 +52,7 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
 
   <!-- Offres récentes -->
   <section class="recent-offers">
+<<<<<<< Updated upstream
     <h2>Nos offres</h2>
     <div class="offer-list">
       <div class="offer-item">
@@ -62,6 +74,28 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
         <button class="favorite-btn">+</button>
       </div>
     </div>
+=======
+  <h2>Nos offres</h2>
+<!-- à remplacer plus tard par php bdd  -->
+<div class="offer-list">
+
+  <?php foreach ($offres as $offre): ?>
+    <div class="offer-item">
+      <span class="tag"><?= htmlspecialchars($offre['domaine']) ?></span>
+      <h3><?= htmlspecialchars($offre['titre']) ?></h3>
+      
+      <p class="info">
+  <?= htmlspecialchars($offre['duree']) ?> mois - 
+  <?= isset($offre['ville']) ? htmlspecialchars($offre['ville']) : 'Lieu non précisé' ?> - 
+  <?= htmlspecialchars($offre['mode']) ?>
+</p>
+
+      <button class="favorite-btn">+</button>
+    </div>
+  <?php endforeach; ?>
+</div>
+
+>>>>>>> Stashed changes
   </section>
 
   <!-- Section Match CV -->
