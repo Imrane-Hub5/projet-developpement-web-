@@ -94,13 +94,14 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
 function showCookiePopup() {
   const cookiePopup = document.querySelector('.cookie-popup');
   cookiePopup.classList.remove('hide'); // Afficher le popup
-  
-  // Animation d'apparition avec un effet de rebond
+
+  // Animation d'apparition
   setTimeout(() => {
     cookiePopup.style.opacity = 1;
     cookiePopup.style.transform = 'translateY(0)';
-    cookiePopup.classList.add('popup-rebound'); // Ajouter une animation de rebond
   }, 100);
+
+  
 }
 
 // Fonction pour cacher le popup avec animation quand le bouton est cliqué
@@ -109,13 +110,10 @@ function acceptCookies() {
   cookiePopup.style.opacity = 0;
   cookiePopup.style.transform = 'translateY(20px)'; // Animation de disparition
 
-  // Appliquer une animation de rotation avant la disparition
-  cookiePopup.classList.add('popup-rotate');
-
   // Cacher après l'animation
   setTimeout(() => {
     cookiePopup.classList.add('hide');
-  }, 500); // Temps de la transition (500ms)
+  }, 300); // Temps de la transition (300ms)
   
   // Enregistrer l'acceptation dans le localStorage pour ne pas afficher le popup à nouveau
   localStorage.setItem('cookieAccepted', 'true');
@@ -128,7 +126,6 @@ document.querySelector('.cookie-popup button').addEventListener('click', acceptC
 window.addEventListener('load', () => {
   showCookiePopup();
 });
-
 
 
   
