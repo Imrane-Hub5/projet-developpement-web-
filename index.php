@@ -52,7 +52,6 @@ $offres = $offreModel->getAllOffres();
 
   <!-- Offres récentes -->
   <section class="recent-offers">
-<<<<<<< Updated upstream
     <h2>Nos offres</h2>
     <div class="offer-list">
       <div class="offer-item">
@@ -74,28 +73,6 @@ $offres = $offreModel->getAllOffres();
         <button class="favorite-btn">+</button>
       </div>
     </div>
-=======
-  <h2>Nos offres</h2>
-<!-- à remplacer plus tard par php bdd  -->
-<div class="offer-list">
-
-  <?php foreach ($offres as $offre): ?>
-    <div class="offer-item">
-      <span class="tag"><?= htmlspecialchars($offre['domaine']) ?></span>
-      <h3><?= htmlspecialchars($offre['titre']) ?></h3>
-      
-      <p class="info">
-  <?= htmlspecialchars($offre['duree']) ?> mois - 
-  <?= isset($offre['ville']) ? htmlspecialchars($offre['ville']) : 'Lieu non précisé' ?> - 
-  <?= htmlspecialchars($offre['mode']) ?>
-</p>
-
-      <button class="favorite-btn">+</button>
-    </div>
-  <?php endforeach; ?>
-</div>
-
->>>>>>> Stashed changes
   </section>
 
   <!-- Section Match CV -->
