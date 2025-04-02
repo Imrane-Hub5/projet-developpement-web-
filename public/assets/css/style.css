@@ -960,57 +960,49 @@ button:hover {
 
 /*--------------------------cookies-------------------------*/
 
-/* Style du popup */
+/* Popup Cookie */
 .cookie-popup {
   position: fixed;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #1e3a5f; 
+  background-color: #333;
   color: white;
-  padding: 15px 30px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 80%; 
-  max-width: 700px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-}
-
-/* Bouton de confirmation */
-.cookie-popup button {
-  background-color: #336699; 
-  border: none;
-  color: white;
-  padding: 10px 20px;
+  padding: 15px;
   border-radius: 5px;
-  cursor: pointer;
+  z-index: 9999;
+  display: block; /* Afficher par défaut si le cookie n'est pas accepté */
+  font-size: 14px;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.cookie-popup p {
+  margin: 0;
+}
+
+.cookie-popup a {
+  color: #66a3ff;
+  text-decoration: none;
+}
+
+.cookie-popup button {
+  background-color: #66a3ff;
+  border: none;
+  padding: 8px 16px;
+  color: white;
   font-size: 16px;
-  transition: background-color 0.3s, transform 0.1s;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
 }
 
-/* Effet visuel au clic */
-.cookie-popup button:active {
-  transform: scale(1);
+.cookie-popup button:hover {
+  background-color: #4c8bf5;
 }
 
-/* Apparition du popup */
-.cookie-popup.show {
-  opacity: 1;
-  visibility: visible;
-}
-.cookie-popup {
-  opacity: 1 !important;
-  visibility: visible !important;
-  transform: translateX(-50%) translateY(0) !important;
-}
-/* Effet au survol et au clic */
-.cookie-popup button:hover, .cookie-popup button:active {
-  transform: scale(1.1); /* Agrandissement */
-}
 
 
 
