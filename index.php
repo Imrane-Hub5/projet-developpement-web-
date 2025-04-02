@@ -11,17 +11,6 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
 }
 ?>
 
-<<<<<<< Updated upstream
-=======
-<?php
-require_once __DIR__ . '/app/models/OffreModel.php';
-$offreModel = new OffreModel(); // ligne 11 ici
-$offres = $offreModel->getAllOffres();
-?>
-
-
-
->>>>>>> Stashed changes
 <main class="main-content">
 
   <!-- Hero Section -->
