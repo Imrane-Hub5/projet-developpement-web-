@@ -11,7 +11,8 @@
         echo '<p style="color: red;">' . htmlspecialchars($_GET['error']) . '</p>';
     }
     ?>
-<form class="connexion-form" action="../../app/controllers/traitement_connexion.php" method="post">
+<form class="connexion-form" action="../../controllers/traitement_connexion.php"  method="post">
+
 <div class="input-group">
             <label for="username">Numéro de téléphone, nom d'utilisateur, email</label>
             <input type="text" id="username" name="username" placeholder="Numéro de téléphone, nom d'utilisateur, email" required>
