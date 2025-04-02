@@ -1,3 +1,5 @@
+<?php include('../includes/header.php'); ?>
+
 <?php
 session_start();
 require_once '../../config/config.php'; // adapte selon ton chemin
@@ -157,3 +159,4 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
 </body>
 </html>
+<?php include('../includes/footer.php'); ?>
