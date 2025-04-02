@@ -1,11 +1,15 @@
-<?php include 'app/views/includes/header.php';
+<?php
+include 'app/views/includes/header.php';
+
+// Vérifie si le cookie existe pour ne pas afficher le popup
+$showCookiePopup = !isset($_COOKIE["cookiesAccepted"]);
+
 if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     setcookie("cookiesAccepted", "true", time() + 31536000, "/"); // Expire dans 1 an
     echo json_encode(["status" => "success"]);
     exit;
 }
 ?>
-
 
 <main class="main-content">
 
@@ -35,103 +39,79 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
     </div>
   </section>
 
-
-  <!-- Intro Domaine -->
-<section class="domain-intro">
-  <h2>Découvre tous les domaines sur EasyStage</h2>
-  <p>Peu importe ton profil ou ton projet, EasyStage regroupe une grande diversité de domaines pour t’aider à trouver la mission qui te correspond vraiment.</p>
-</section>
-
-<!-- Section Par Domaine -->
-<section class="domains">
-  <div class="domain-header">
-    <h2>Explore les domaines disponibles</h2>
-    <p>Découvre tous les domaines dans lesquels tu peux postuler sur EasyStage</p>
-  </div>
-  <div class="domain-scroll-container">
-    <button class="scroll-btn left">&lt;</button>
-    <div class="domain-list">
-      <div class="domain-card">Développement</div>
-      <div class="domain-card">Marketing</div>
-      <div class="domain-card">Design</div>
-      <div class="domain-card">Ressources Humaines</div>
-      <div class="domain-card">Finance</div>
-      <div class="domain-card">Data / IA</div>
-      <div class="domain-card">Communication</div>
-      <div class="domain-card">Product Design</div>
-      <div class="domain-card">CyberSécurité</div>
-      <div class="domain-card">UX/UI</div>
-      <div class="domain-card">IT</div>
-      <div class="domain-card">Support Technique</div>
-      <div class="domain-card">Gestion de projet</div>
-      <div class="domain-card">Événementiel</div>
-      <div class="domain-card">Commerce</div>
-      <div class="domain-card">Stratégie</div>
-    </div>
-    <button class="scroll-btn right">&gt;</button>
-  </div>
-</section>
-
-
   <!-- Offres récentes -->
   <section class="recent-offers">
-  <h2>Nos offres</h2>
-<!-- à remplacer plus tard par php bdd  -->
-<div class="offer-list">
-
-<div class="offer-item">
-  <span class="tag">Développement</span>
-  <h3>Développeur Web</h3>
-  <p class="info">3 mois - Lille - Télétravail partiel</p>
-  <button class="favorite-btn">+</button>
-</div>
-
-<div class="offer-item">
-  <span class="tag">Marketing</span>
-  <h3>Chargé(e) de Communication</h3>
-  <p class="info">6 mois - Paris - Présentiel</p>
-  <button class="favorite-btn">+</button>
-</div>
-
-<div class="offer-item">
-  <span class="tag">Design</span>
-  <h3>UI/UX Designer</h3>
-  <p class="info">4 mois - Lyon - Hybride</p>
-  <button class="favorite-btn">+</button>
-</div>
-
-<div class="offer-item">
-  <span class="tag">Data / IA</span>
-  <h3>Data Analyst Junior</h3>
-  <p class="info">5 mois - Toulouse - Télétravail complet</p>
-  <button class="favorite-btn">+</button>
-</div>
-
-<div class="offer-item">
-  <span class="tag">Finance</span>
-  <h3>Assistant Comptable</h3>
-  <p class="info">2 mois - Marseille - Présentiel</p>
-  <button class="favorite-btn">+</button>
-</div>
-
-<div class="offer-item">
-  <span class="tag">Gestion de projet</span>
-  <h3>Assistant Chef de Projet</h3>
-  <p class="info">6 mois - Nantes - Hybride</p>
-  <button class="favorite-btn">+</button>
-</div>
-</div>
+    <h2>Nos offres</h2>
+    <div class="offer-list">
+      <div class="offer-item">
+        <span class="tag">Développement</span>
+        <h3>Développeur Web</h3>
+        <p class="info">3 mois - Lille - Télétravail partiel</p>
+        <button class="favorite-btn">+</button>
+      </div>
+      <div class="offer-item">
+        <span class="tag">Marketing</span>
+        <h3>Chargé(e) de Communication</h3>
+        <p class="info">6 mois - Paris - Présentiel</p>
+        <button class="favorite-btn">+</button>
+      </div>
+      <div class="offer-item">
+        <span class="tag">Design</span>
+        <h3>UI/UX Designer</h3>
+        <p class="info">4 mois - Lyon - Hybride</p>
+        <button class="favorite-btn">+</button>
+      </div>
+    </div>
   </section>
 
-    <!-- Section Match CV -->
-    <section class="cv-match-card">
-  <h2>Matchez votre CV</h2>
-  <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
-  <button>Importer mon CV</button>
-</section>
+  <!-- Section Match CV -->
+  <section class="cv-match-card">
+    <h2>Matchez votre CV</h2>
+    <p>Importe ton CV et découvre les offres qui te correspondent le mieux. Ton avenir pro commence ici.</p>
+    <button>Importer mon CV</button>
+  </section>
 
-
+  <!-- Popup Cookie -->
+  <?php if ($showCookiePopup): ?>
+  <div class="cookie-popup" id="cookiePopup">
+    <p>🍪 Ce site utilise des cookies pour améliorer votre expérience. 
+        <a href="politique-cookies.php">En savoir plus</a>.
+    </p>
+    <button id="acceptCookies">Accepter</button>
+  </div>
+  <?php endif; ?>
 
 </main>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const cookiePopup = document.getElementById("cookiePopup");
+    const acceptButton = document.getElementById("acceptCookies");
+
+    if (cookiePopup && acceptButton) {
+        acceptButton.addEventListener("click", function () {
+            // Envoi de la requête pour accepter le cookie
+            fetch("/set-cookie", {
+                method: "POST", 
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    // Cache le popup
+                    cookiePopup.style.display = "none";
+                    // Optionnel: vous pouvez vérifier si le cookie a bien été mis à jour ici.
+                    alert("Cookie accepté !");
+                }
+            })
+            .catch(error => {
+                console.error("Erreur lors de l'enregistrement du cookie : ", error);
+            });
+        });
+    }
+});
+</script>
 
 <?php include 'app/views/includes/footer.php'; ?>
