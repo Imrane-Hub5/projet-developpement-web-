@@ -3,11 +3,55 @@
 <body>
     <h2>Offres de Stage</h2>
 
-    <!-- Barre de recherche -->
-    <input type="text" id="searchInput" placeholder="Rechercher une offre..." onkeyup="filterOffers()">
-    <button onclick="openFilterPopup()">
-        <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3208979/filter-icon-md.png" alt="Filtrer" width="30" height="30">
-    </button>
+    <div id="poda">
+      <div class="glow"></div>
+      <div class="darkBorderBg"></div>
+      <div class="darkBorderBg"></div>
+      <div class="darkBorderBg"></div>
+      <div class="white"></div>
+      <div class="border"></div>
+      <div id="main">
+        <input id="searchInput" placeholder="Rechercher une offre..." type="text" name="text" class="input" onkeyup="filterOffers()"/>
+        <div id="input-mask"></div>
+        <div id="pink-mask"></div>
+        <div class="filterBorder"></div>
+        <div id="filter-icon" onclick="openFilterPopup()">
+          <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3208979/filter-icon-md.png" alt="Filtrer" width="30" height="30">
+        </div>
+        <div id="search-icon">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            viewBox="0 0 24 24"
+            stroke-width="2"
+            stroke-linejoin="round"
+            stroke-linecap="round"
+            height="54"
+            fill="none"
+            class="feather feather-search"
+          >
+            <circle stroke="url(#search)" r="8" cy="11" cx="11"></circle>
+            <line
+              stroke="url(#searchl)"
+              y2="16.65"
+              y1="22"
+              x2="16.65"
+              x1="22"
+            ></line>
+            <defs>
+              <linearGradient gradientTransform="rotate(50)" id="search">
+                <stop stop-color="#f8e7f8" offset="0%"></stop>
+                <stop stop-color="#b6a9b7" offset="50%"></stop>
+              </linearGradient>
+              <linearGradient id="searchl">
+                <stop stop-color="#b6a9b7" offset="0%"></stop>
+                <stop stop-color="#837484" offset="50%"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </div>
 
     <!-- Pop-up de filtrage -->
     <div id="filterPopup" class="popup">
@@ -21,6 +65,8 @@
             <button onclick="applyFilter()">Appliquer</button>
         </div>
     </div>
+
+</body>
 
     <div id="offresContainer">
     <?php
@@ -86,27 +132,6 @@
         }
     </script>
 
-    <style>
-        .popup {
-            display: none;
-            position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        .popup-content {
-            text-align: center;
-        }
-        .close {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            cursor: pointer;
-        }
-    </style>
-</body>
+  
+</>
 </html>
