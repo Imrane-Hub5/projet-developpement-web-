@@ -96,14 +96,18 @@ $offresAffichees = array_slice($offres, $debut, $offresParPage);
 
 // Affichage
 foreach ($offresAffichees as $offre) {
-    echo '<section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
-            <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
-            <div class="info_public">
-                <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>
-                <p>' . htmlspecialchars($offre["lieu"]) . '</p>
-            </div>
-        </section>';
+    echo '
+    <section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
+        <button class="btn-wishlist">+</button>
+        <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
+        <div class="info_public">
+            <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>
+            <p>' . htmlspecialchars($offre["lieu"]) . '</p>
+        </div>
+        <button class="btn-view">Afficher l\'offre</button>
+    </section>';
 }
+
 
 // Affichage de la pagination
 echo '<div class="pagination" style="text-align:center; margin-top: 20px;">';
@@ -170,6 +174,8 @@ echo '</div>';
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+
         }
         .popup-content {
             text-align: center;
@@ -203,6 +209,68 @@ echo '</div>';
 .pagination a:hover {
     background-color: #2980b9;
 }
+.entreprise {
+    position: relative;
+    background-color: #121c2c;
+    color: #fff;
+    padding: 25px;
+    border-radius: 18px;
+    margin: 20px auto;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+    transition: transform 0.2s ease;
+}
+
+.entreprise:hover {
+    transform: translateY(-5px);
+}
+
+.badge {
+    background-color: #2a3f5f;
+    color: #cfe3fc;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.btn-wishlist {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #0a0f1c;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-wishlist:hover {
+    background-color: #1e90ff;
+}
+
+.btn-view {
+    margin-top: 15px;
+    padding: 8px 16px;
+    background-color: transparent;
+    border: 1px solid #1e90ff;
+    color: #1e90ff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-view:hover {
+    background-color: #1e90ff;
+    color: white;
+}
+
 
     </style>
 </body>
