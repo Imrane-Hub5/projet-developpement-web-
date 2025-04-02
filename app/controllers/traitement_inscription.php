@@ -2,9 +2,16 @@
 session_start();
 require_once __DIR__ . '/../config/config.php';
 
-// Vérifie que le formulaire a été envoyé
+// 🔐 Si l'utilisateur est déjà connecté (entreprise), on récupère ses offres
+if (isset($_SESSION['user_id']) && $_SESSION['role'] === 'entreprise') {
+    $entreprise_id = $_SESSION['user_id'];
+    $stmt = $pdo->prepare("SELECT * FROM offres WHERE entreprise_id = ?");
+    $stmt->execute([$entreprise_id]);
+    $offres = $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+// 📩 Traitement du formulaire
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Nettoyage et assignation
     $role       = $_POST['role'] ?? '';
     $nom        = trim($_POST['nom'] ?? '');
     $prenom     = trim($_POST['prenom'] ?? '');
@@ -13,10 +20,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $password   = $_POST['password'] ?? '';
     $domaine    = $_POST['domaine'] ?? '';
 
-    // Hash du mot de passe
     $mot_de_passe = password_hash($password, PASSWORD_DEFAULT);
 
-    // Champs supplémentaires si étudiant
     $niveau     = $_POST['niveau'] ?? null;
     $ville      = $_POST['ville'] ?? null;
     $date_dispo = $_POST['date'] ?? null;
@@ -24,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $duree      = $_POST['duree'] ?? null;
     $mode       = $_POST['mode'] ?? null;
 
-    // Vérifie si l’email existe déjà
+    // Vérifie si l’email est déjà utilisé
     $checkEmail = $pdo->prepare("SELECT id FROM utilisateurs WHERE email = ?");
     $checkEmail->execute([$email]);
     
@@ -84,9 +89,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         </html>';
         exit;
     }
-    
-    
-    // Prépare la requête d’insertion
+
+    // Insertion dans la BDD
     $query = $pdo->prepare("
         INSERT INTO utilisateurs (
             nom, prenom, email, telephone, mot_de_passe, role, domaine,
@@ -111,24 +115,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     ]);
 
     if ($success) {
-        if ($success) {
-            // On définit les sessions
-            $_SESSION['email'] = $email;
-            $_SESSION['role'] = $role;
-        
-            // Redirection automatique vers le bon dashboard
-            if ($role === 'candidat') {
-                header("Location: ../views/utilisateurs/profil_etudiant.php");
-                exit;
-            } elseif ($role === 'entreprise') {
-                header("Location: ../views/utilisateurs/profil_entreprise.php");
-                exit;
-            } else {
-                echo "Rôle non reconnu.";
-                exit;
-            }
+        $_SESSION['email'] = $email;
+        $_SESSION['role'] = $role;
+
+        // Récupère l'ID inséré
+        $_SESSION['user_id'] = $pdo->lastInsertId();
+
+        // Redirection après inscription selon le rôle
+        if ($role === 'candidat') {
+            header("Location: ../views/utilisateurs/profil_etudiant.php");
+            exit;
+        } elseif ($role === 'entreprise') {
+            header("Location: ../views/utilisateurs/profil_entreprise.php");
+            exit;
+        } else {
+            echo "Rôle non reconnu.";
+            exit;
         }
-        
     } else {
         echo "Erreur lors de la création du compte. 🚨";
     }
