@@ -1,4 +1,7 @@
 <?php include('../includes/header.php'); ?>
+<?php if (isset($_GET['error'])): ?>
+    <p class="error"><?= htmlspecialchars($_GET['error']) ?></p>
+<?php endif; ?>
 
 <main class="connexion-container">
     <h2>SE CONNECTER</h2>
@@ -8,8 +11,9 @@
         echo '<p style="color: red;">' . htmlspecialchars($_GET['error']) . '</p>';
     }
     ?>
-    <form class="connexion-form" action="app\controllers\traitement_connexion.php" method="post">
-        <div class="input-group">
+<form class="connexion-form" action="../../controllers/traitement_connexion.php"  method="post">
+
+<div class="input-group">
             <label for="username">Numéro de téléphone, nom d'utilisateur, email</label>
             <input type="text" id="username" name="username" placeholder="Numéro de téléphone, nom d'utilisateur, email" required>
         </div>

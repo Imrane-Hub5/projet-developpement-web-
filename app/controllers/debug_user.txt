@@ -1,0 +1,18 @@
+Array
+(
+    [id] => 15
+    [nom] => TEST
+    [prenom] => 
+    [email] => testtest.1111@gmail.com
+    [telephone] => 0782244516
+    [mot_de_passe] => $2y$10$f6LWABxgz4HsJ6CWvmhKdeSheGmYy5b.6ieHBg7rlkuSykQ6cdpbu
+    [role] => entreprise
+    [domaine] => Marketing
+    [niveau] => 
+    [ville] => 
+    [date_dispo] => 0000-00-00
+    [type] => 
+    [duree] => 
+    [mode] => 
+    [created_at] => 2025-04-02 15:42:52
+)

@@ -1,5 +1,4 @@
 <?php include('includes/header.php'); ?> 
-
 <body>
     <h2>Offres de Stage</h2>
 
@@ -69,24 +68,52 @@
 </body>
 
     <div id="offresContainer">
-    <?php
-    $offres = [
-        ["nom" => "offre A", "duree" => "1", "lieu" => "Paris"],
-        ["nom" => "offre B", "duree" => "12", "lieu" => "Lille"],
-        ["nom" => "offre C", "duree" => "6", "lieu" => "Lyon"],
-        ["nom" => "offre D", "duree" => "18", "lieu" => "Marseille"],
-    ];
 
-    foreach ($offres as $offre) {
-        echo '<section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
-                <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
-                <div class="info_public">
-                    <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>
-                    <p>' . htmlspecialchars($offre["lieu"]) . '</p>
-                </div>
-            </section>';
-    }
-    ?>
+    <!-- ==============================
+     =================PAGINATION=======
+     ================================== -->
+    <?php
+// Toutes les offres simulées (comme ton collègue les a mises)
+$offres = [
+    ["nom" => "offre A", "duree" => "1", "lieu" => "Paris"],
+    ["nom" => "offre B", "duree" => "12", "lieu" => "Lille"],
+    ["nom" => "offre C", "duree" => "6", "lieu" => "Lyon"],
+    ["nom" => "offre D", "duree" => "18", "lieu" => "Marseille"],
+    ["nom" => "offre E", "duree" => "3", "lieu" => "Nice"],
+    ["nom" => "offre F", "duree" => "8", "lieu" => "Toulouse"],
+];
+
+// Pagination
+$offresParPage = 2;
+$totalOffres = count($offres);
+$totalPages = ceil($totalOffres / $offresParPage);
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$page = max(1, min($page, $totalPages)); // sécurise la page
+$debut = ($page - 1) * $offresParPage;
+
+// Découpe le tableau pour afficher seulement ce qu’il faut
+$offresAffichees = array_slice($offres, $debut, $offresParPage);
+
+// Affichage
+foreach ($offresAffichees as $offre) {
+    echo '<section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
+            <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
+            <div class="info_public">
+                <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>
+                <p>' . htmlspecialchars($offre["lieu"]) . '</p>
+            </div>
+        </section>';
+}
+
+// Affichage de la pagination
+echo '<div class="pagination" style="text-align:center; margin-top: 20px;">';
+for ($i = 1; $i <= $totalPages; $i++) {
+    $active = ($i == $page) ? "style='font-weight:bold; background-color:#2c3e50; color:white; padding:6px 12px; border-radius:5px;'" : "";
+    echo "<a href='offres.php?page=$i' $active>$i</a> ";
+}
+echo '</div>';
+?>
+
     </div>
 
     <script>
@@ -132,6 +159,56 @@
         }
     </script>
 
+    <style>
+        .popup {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        .popup-content {
+            text-align: center;
+        }
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+
+        /* CSS PAGINATION */
+
+        .pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+.pagination a {
+    margin: 0 5px;
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.pagination a.active {
+    background-color: #2c3e50;
+    font-weight: bold;
+}
+.pagination a:hover {
+    background-color: #2980b9;
+}
+
+    </style>
+</body>
   
 </>
 </html>
+
+
+<?php include('includes/footer.php'); ?>
