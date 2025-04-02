@@ -16,10 +16,11 @@ include('../includes/header.php');
 
     <section class="input-group">
         <h3>🧾 Tes informations personnelles</h3>
-        <p><strong>Nom :</strong> <?= htmlspecialchars($_SESSION['username']) ?></p>
-        <p><strong>Email :</strong> <?= htmlspecialchars($_SESSION['email']) ?></p>
-        <p><strong>Téléphone :</strong> <?= htmlspecialchars($_SESSION['telephone']) ?></p>
-        <p><strong>Domaine :</strong> <?= htmlspecialchars($_SESSION['domaine']) ?></p>
+        <p><strong>Nom :</strong> <?= htmlspecialchars($_SESSION['nom'] ?? 'Non défini') ?></p>
+        <p><strong>Email :</strong> <?= htmlspecialchars($_SESSION['email'] ?? 'Non défini') ?></p>
+        <p><strong>Téléphone :</strong> <?= htmlspecialchars($_SESSION['telephone'] ?? 'Non défini') ?></p>
+        <p><strong>Domaine :</strong> <?= htmlspecialchars($_SESSION['domaine'] ?? 'Non défini') ?></p>
+
     </section>
 
     <section class="input-group">
@@ -50,3 +51,78 @@ include('../includes/header.php');
 </main>
 
 <?php include('../includes/footer.php'); ?>
+
+<style>
+/* === Style pour la page profil étudiant === */
+
+.inscription-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', sans-serif;
+  color: #2c3e50;
+}
+
+.form-title {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1e90ff;
+}
+
+.input-group {
+  background-color: #f7f9fc;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-left: 5px solid #1e90ff;
+  border-radius: 10px;
+}
+
+.input-group h3 {
+  margin-top: 0;
+  color: #34495e;
+}
+
+.input-group p {
+  margin: 8px 0;
+  line-height: 1.6;
+}
+
+.input-group form {
+  margin-top: 10px;
+}
+
+.input-group input[type="file"],
+.input-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccd6dd;
+  border-radius: 8px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.input-group textarea {
+  resize: vertical;
+}
+
+.btn-continue {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #1e90ff;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-continue:hover {
+  background-color: #0f6cd4;
+}
+</style>
