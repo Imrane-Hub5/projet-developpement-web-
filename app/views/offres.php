@@ -1,5 +1,4 @@
 <?php include('includes/header.php'); ?> 
-
 <body>
     <h2>Offres de Stage</h2>
 
