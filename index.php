@@ -1,4 +1,4 @@
-<?php
+<?php 
 include 'app/views/includes/header.php';
 
 // Vérifie si le cookie existe pour ne pas afficher le popup
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
   <?php if ($showCookiePopup): ?>
   <div class="cookie-popup" id="cookiePopup">
     <p>🍪 Ce site utilise des cookies pour améliorer votre expérience. 
-        <a href="politique-cookies.php">En savoir plus</a>.
+        <a href="politique-cookies.php">En savoir plus</a> .
     </p>
     <button id="acceptCookies">Accepter</button>
   </div>
@@ -84,34 +84,48 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
 </main>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const cookiePopup = document.getElementById("cookiePopup");
-    const acceptButton = document.getElementById("acceptCookies");
+// Fonction pour afficher le popup avec animation
+function showCookiePopup() {
+  const cookiePopup = document.querySelector('.cookie-popup');
+  cookiePopup.classList.remove('hide'); // Afficher le popup
+  
+  // Animation d'apparition avec un effet de rebond
+  setTimeout(() => {
+    cookiePopup.style.opacity = 1;
+    cookiePopup.style.transform = 'translateY(0)';
+    cookiePopup.classList.add('popup-rebound'); // Ajouter une animation de rebond
+  }, 100);
+}
 
-    if (cookiePopup && acceptButton) {
-        acceptButton.addEventListener("click", function () {
-            // Envoi de la requête pour accepter le cookie
-            fetch("/set-cookie", {
-                method: "POST", 
-                headers: {
-                    "Content-Type": "application/json"
-                },
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.status === "success") {
-                    // Cache le popup
-                    cookiePopup.style.display = "none";
-                    // Optionnel: vous pouvez vérifier si le cookie a bien été mis à jour ici.
-                    alert("Cookie accepté !");
-                }
-            })
-            .catch(error => {
-                console.error("Erreur lors de l'enregistrement du cookie : ", error);
-            });
-        });
-    }
+// Fonction pour cacher le popup avec animation quand le bouton est cliqué
+function acceptCookies() {
+  const cookiePopup = document.querySelector('.cookie-popup');
+  cookiePopup.style.opacity = 0;
+  cookiePopup.style.transform = 'translateY(20px)'; // Animation de disparition
+
+  // Appliquer une animation de rotation avant la disparition
+  cookiePopup.classList.add('popup-rotate');
+
+  // Cacher après l'animation
+  setTimeout(() => {
+    cookiePopup.classList.add('hide');
+  }, 500); // Temps de la transition (500ms)
+  
+  // Enregistrer l'acceptation dans le localStorage pour ne pas afficher le popup à nouveau
+  localStorage.setItem('cookieAccepted', 'true');
+}
+
+// Attacher l'événement au bouton "Accepter"
+document.querySelector('.cookie-popup button').addEventListener('click', acceptCookies);
+
+// Vérifier si les cookies ont déjà été acceptés au chargement de la page
+window.addEventListener('load', () => {
+  showCookiePopup();
 });
+
+
+
+  
 </script>
 
 <?php include 'app/views/includes/footer.php'; ?>
