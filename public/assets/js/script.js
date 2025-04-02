@@ -41,23 +41,5 @@ function toggleMenu() {
 
 
 
-/*------------------------COOKIES------------------------------*/
-acceptBtn.addEventListener("click", function () {
-  localStorage.setItem("cookiesAccepted", "true");
-
-  // Envoi des données au backend via fetch()
-  fetch("enregistrer_consentement.php", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: "accept=true"
-  });
-
-  // Transition de disparition
-  cookiePopup.style.opacity = "0";
-  setTimeout(() => {
-      cookiePopup.style.display = "none"; 
-      body.classList.remove("blur-background");
-  }, 500);
-});
 
 
