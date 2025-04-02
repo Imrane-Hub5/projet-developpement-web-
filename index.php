@@ -39,7 +39,13 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
     </div>
   </section>
 
-  <!-- Offres récentes -->
+  <!-- Offres récentes =================
+   ====================================
+   ===================================
+   ===================================
+   a vhanger mettre de la bdd=========
+   ================================
+   -->
   <section class="recent-offers">
     <h2>Nos offres</h2>
     <div class="offer-list">
