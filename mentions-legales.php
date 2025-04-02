@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mentions légales</title>
-    <link rel="stylesheet" href="public\assets\css\style.css"> 
+    <link rel="stylesheet" href="public/assets/css/style.css">
 </head>
 <body>
     <header>
@@ -20,7 +20,7 @@
     <main>
         <section class="container">
             <h1>Mentions légales</h1>
-            <div class="content">
+            <div class="legal-content">
                 <h2>Éditeur du site</h2>
                 <p><strong>Nom de l'entreprise</strong><br>Adresse de l'entreprise<br>SIRET: XXXXXXXX</p>
 
