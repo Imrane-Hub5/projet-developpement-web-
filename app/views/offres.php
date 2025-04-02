@@ -162,3 +162,6 @@ echo '</div>';
     </style>
 </body>
 </html>
+
+
+<?php include('includes/footer.php'); ?>
