@@ -90,45 +90,38 @@ if ($_SERVER['REQUEST_URI'] == '/set-cookie' && $_SERVER['REQUEST_METHOD'] === '
 </main>
 
 <script>
-// Fonction pour afficher le popup avec animation
-function showCookiePopup() {
-  const cookiePopup = document.querySelector('.cookie-popup');
-  cookiePopup.classList.remove('hide'); // Afficher le popup
+document.addEventListener("DOMContentLoaded", function () {
+  const cookiePopup = document.getElementById("cookiePopup");
+  const acceptButton = document.getElementById("acceptCookies");
 
-  // Animation d'apparition
-  setTimeout(() => {
-    cookiePopup.style.opacity = 1;
-    cookiePopup.style.transform = 'translateY(0)';
-  }, 100);
+  // Si le cookie est déjà accepté, ne pas afficher le popup
+  if (document.cookie.indexOf("cookiesAccepted=true") === -1) {
+    setTimeout(() => {
+      showCookiePopup();
+    }, 500); // Délai pour une meilleure transition
+  }
 
-  
-}
+  // Fonction pour afficher le popup avec animation
+  function showCookiePopup() {
+    cookiePopup.classList.remove("hide"); // Assure que le popup est visible
+    cookiePopup.classList.add("show"); // Applique les styles pour afficher le popup
+    cookiePopup.classList.add("popup-slide"); // Ajoute l'animation
+  }
 
-// Fonction pour cacher le popup avec animation quand le bouton est cliqué
-function acceptCookies() {
-  const cookiePopup = document.querySelector('.cookie-popup');
-  cookiePopup.style.opacity = 0;
-  cookiePopup.style.transform = 'translateY(20px)'; // Animation de disparition
+  // Fonction pour accepter les cookies
+  function acceptCookies() {
+    // Cacher le popup après l'acceptation
+    cookiePopup.classList.remove("show");
+    cookiePopup.classList.add("hide");
 
-  // Cacher après l'animation
-  setTimeout(() => {
-    cookiePopup.classList.add('hide');
-  }, 300); // Temps de la transition (300ms)
-  
-  // Enregistrer l'acceptation dans le localStorage pour ne pas afficher le popup à nouveau
-  localStorage.setItem('cookieAccepted', 'true');
-}
+    // Définir le cookie pour que le popup ne s'affiche plus
+    document.cookie = "cookiesAccepted=true; max-age=31536000; path=/"; // Cookie valide pendant 1 an
+  }
 
-// Attacher l'événement au bouton "Accepter"
-document.querySelector('.cookie-popup button').addEventListener('click', acceptCookies);
-
-// Vérifier si les cookies ont déjà été acceptés au chargement de la page
-window.addEventListener('load', () => {
-  showCookiePopup();
+  // Attacher l'événement au bouton "Accepter"
+  acceptButton.addEventListener("click", acceptCookies);
 });
 
-
-  
 </script>
 
 <?php include 'app/views/includes/footer.php'; ?>
