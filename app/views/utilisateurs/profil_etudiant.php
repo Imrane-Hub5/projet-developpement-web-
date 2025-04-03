@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 
@@ -45,9 +46,42 @@ include('../includes/header.php');
     </section>
 
     <section class="input-group">
-        <h3>📋 Tes candidatures</h3>
-        <p>(À remplir plus tard avec les candidatures faites.)</p>
-    </section>
+    <h3>📋 Tes candidatures</h3>
+
+    <?php
+    try {
+        require_once '../../config/config.php';
+
+        $stmt = $pdo->prepare("
+            SELECT offres.titre, offres.domaine, offres.localisation, offres.duree, offres.mode
+            FROM candidatures
+            JOIN offres ON candidatures.offre_id = offres.id
+            WHERE candidatures.utilisateur_id = ?
+        ");
+        $stmt->execute([$_SESSION['user_id']]);
+        $candidatures = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+        if (count($candidatures) > 0): ?>
+            <ul class="candidature-list">
+                <?php foreach ($candidatures as $c): ?>
+                    <li>
+                        <strong><?= htmlspecialchars($c['titre']) ?></strong><br>
+                        Domaine : <?= htmlspecialchars($c['domaine']) ?><br>
+                        Durée : <?= htmlspecialchars($c['duree']) ?> mois<br>
+                        Localisation : <?= htmlspecialchars($c['localisation']) ?><br>
+                        Mode : <?= htmlspecialchars($c['mode']) ?>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <p>Tu n’as pas encore postulé à une offre.</p>
+        <?php endif;
+    } catch (PDOException $e) {
+        echo "<p style='color: grey;'>Aucune candidature enregistrée pour l’instant, ou fonctionnalité non encore disponible.</p>";
+    }
+    ?>
+</section>
+
 </main>
 
 <?php include('../includes/footer.php'); ?>
@@ -125,4 +159,4 @@ include('../includes/header.php');
 .btn-continue:hover {
   background-color: #0f6cd4;
 }
-</style>
+</style>  
