@@ -1,18 +1,18 @@
 Array
 (
-    [id] => 6
-    [nom] => Benyezzar
-    [prenom] => Melissa
-    [email] => haroun@gmail.com
-    [telephone] => 0782244516
-    [mot_de_passe] => $2y$10$HbwyETlaoa5uTi/xlZa4D.WVylJZFy21mJNtRF6igkA2hL0j8t1Je
+    [id] => 16
+    [nom] => Maadoum
+    [prenom] => Imrane
+    [email] => imrane.maadoum@gmail.com
+    [telephone] => 0768959748
+    [mot_de_passe] => $2y$10$/ziIwxhWRZRrPqAbQlArNOQLFuiVh.cOm1dFy7OVP7v8DMZgu2X0.
     [role] => candidat
-    [domaine] => Marketing
-    [niveau] => Lycée - Première
+    [domaine] => Cybersécurité
+    [niveau] => Bac +2
     [ville] => Lille
-    [date_dispo] => 2001-05-22
+    [date_dispo] => 2025-04-02
     [type] => Stage
-    [duree] => 1 mois
-    [mode] => Présentiel
-    [created_at] => 2025-04-01 22:45:50
+    [duree] => 3 mois
+    [mode] => Hybride
+    [created_at] => 2025-04-02 18:20:36
 )
