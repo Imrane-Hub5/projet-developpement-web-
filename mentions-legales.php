@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mentions légales</title>
+    <title>Mentions légales - EasyStage</title>
     <link rel="stylesheet" href="public/assets/css/style.css">
 </head>
 <body>
@@ -22,13 +22,13 @@
             <h1>Mentions légales</h1>
             <div class="legal-content">
                 <h2>Éditeur du site</h2>
-                <p><strong>Nom de l'entreprise</strong><br>Adresse de l'entreprise<br>SIRET: XXXXXXXX</p>
+                <p><strong>EasyStage</strong><br>Adresse de l'entreprise<br>SIRET: XXXXXXXX</p>
 
                 <h2>Hébergement</h2>
                 <p><strong>Nom de l'hébergeur</strong><br>Adresse de l'hébergeur</p>
 
                 <h2>Responsabilité</h2>
-                <p>Le site [nom du site] a pour but de [décrire l'objectif du site]. Nous nous efforçons de fournir un contenu de qualité mais ne pouvons être tenus responsables de l'exactitude, de l'exhaustivité ou de l'actualité des informations publiées.</p>
+                <p>Le site EasyStage a pour objectif d'aider les étudiants à trouver un stage ou une alternance. Nous nous efforçons de fournir un contenu de qualité, mais ne pouvons être tenus responsables de l'exactitude, de l'exhaustivité ou de l'actualité des informations publiées.</p>
 
                 <h2>Propriété intellectuelle</h2>
                 <p>Tous les éléments du site (textes, images, logos, vidéos) sont protégés par les lois sur la propriété intellectuelle. Toute reproduction, distribution ou utilisation sans autorisation préalable est interdite.</p>
@@ -41,7 +41,7 @@
 
     <footer>
         <div class="footer-container">
-            <p>&copy; 2025 Votre entreprise - Tous droits réservés</p>
+            <p>&copy; 2025 EasyStage - Tous droits réservés</p>
         </div>
     </footer>
 </body>
