@@ -1,4 +1,7 @@
-<?php include('includes/header.php'); ?> 
+<?php include('includes/header.php'); 
+require_once __DIR__ . '/../config/config.php';
+?>
+
 <body>
     <h2>Offres de Stage</h2>
 
@@ -98,7 +101,7 @@ $offresAffichees = array_slice($offres, $debut, $offresParPage);
 foreach ($offresAffichees as $offre) {
     echo '
     <section class="entreprise" data-lieu="' . htmlspecialchars($offre["lieu"]) . '" data-duree="' . htmlspecialchars($offre["duree"]) . '">
-        <button class="btn-wishlist" data-id="' . $offre['id'] . '">+</button>
+        <button class="btn-wishlist">+</button>
         <h3>' . htmlspecialchars($offre["nom"]) . '</h3>
         <div class="info_public">
             <span class="badge">' . htmlspecialchars($offre["duree"]) . ' mois</span>

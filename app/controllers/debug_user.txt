@@ -1,18 +1,18 @@
 Array
 (
-    [id] => 15
-    [nom] => TEST
-    [prenom] => 
-    [email] => testtest.1111@gmail.com
-    [telephone] => 0782244516
-    [mot_de_passe] => $2y$10$f6LWABxgz4HsJ6CWvmhKdeSheGmYy5b.6ieHBg7rlkuSykQ6cdpbu
-    [role] => entreprise
-    [domaine] => Marketing
-    [niveau] => 
-    [ville] => 
-    [date_dispo] => 0000-00-00
-    [type] => 
-    [duree] => 
-    [mode] => 
-    [created_at] => 2025-04-02 15:42:52
+    [id] => 16
+    [nom] => Maadoum
+    [prenom] => Imrane
+    [email] => imrane.maadoum@gmail.com
+    [telephone] => 0768959748
+    [mot_de_passe] => $2y$10$/ziIwxhWRZRrPqAbQlArNOQLFuiVh.cOm1dFy7OVP7v8DMZgu2X0.
+    [role] => candidat
+    [domaine] => Cybersécurité
+    [niveau] => Bac +2
+    [ville] => Lille
+    [date_dispo] => 2025-04-02
+    [type] => Stage
+    [duree] => 3 mois
+    [mode] => Hybride
+    [created_at] => 2025-04-02 18:20:36
 )
